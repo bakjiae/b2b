@@ -1,0 +1,13 @@
+/* Mac */
+.DS_Store
+
+/* Build outputs */
+*.css.map
+style.css.map
+
+/* Node (not used intentionally) */
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
