@@ -136,6 +136,11 @@ a {
   cursor: pointer;
 }
 
+strong, em {
+  font-weight: inherit;
+  font-style: unset;
+}
+
 ul,
 ol {
   list-style: none;
@@ -173,7 +178,7 @@ h2,
   line-height: 25px;
 }
 
-.h2-5 {
+.h2-5, .hero-cta .btn {
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
@@ -368,7 +373,7 @@ p,
   height: var(--height-l);
   background: var(--primary-200);
 }
-.announcement-bar b {
+.announcement-bar em {
   font-weight: 700;
   color: var(--primary-500);
 }
@@ -411,7 +416,7 @@ p,
   padding-top: calc(var(--height-l) + 72px);
 }
 .main .btn {
-  min-width: 320px;
+  min-width: 240px;
 }
 
 .hero .inner {
@@ -419,6 +424,7 @@ p,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 88px 0;
 }
 .hero-visual {
   position: relative;
@@ -464,6 +470,16 @@ p,
   right: var(--spacing-m);
   bottom: 0;
 }
+.hero-visual .line:nth-child(2) .img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: var(--spacing-m);
+}
+.hero-visual .line:nth-child(2) .img:nth-child(2) {
+  position: absolute;
+  right: var(--spacing-m);
+  bottom: 0;
+}
 .hero-visual .line:nth-child(3) {
   margin-bottom: 0;
 }
@@ -497,4 +513,20 @@ p,
   position: absolute;
   right: 0.1em;
   bottom: 0.1em;
+}
+.hero-subcopy {
+  margin-top: 56px;
+  text-align: center;
+  color: var(--opacity-black600);
+}
+.hero-subcopy em {
+  color: var(--opacity-black);
+}
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-l);
+}
+.hero-cta .btn {
+  height: var(--height-xxl);
 }/*# sourceMappingURL=style.css.map */
