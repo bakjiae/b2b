@@ -18,7 +18,7 @@
     </button>
     <header class="header">
         <div class="inner">
-            <nav class="nav" aria-label="주요 메뉴">
+            <nav class="nav">
                 <a class="logo" href="#"><img src="img/logo_lingora_tutoring.svg" alt="Lingora Tutoring"></a>
                 <ul class="pc_only">
                     <li><button class="btn ghost">서비스 소개</button></li>
@@ -191,15 +191,15 @@
                     <h2 class="solution-heading">링고라의 세 가지 솔루션</h2>
                     <ul>
                         <li>
-                            <h3 class="tag">1:1 전화/화상</h3>
+                            <h3 class="tag phone">1:1 전화/화상</h3>
                             <img src="img/img_solution_01.png" alt="">
                         </li>
                         <li>
-                            <h3 class="tag green">오프라인 출강</h3>
+                            <h3 class="tag offline">오프라인 출강</h3>
                             <img src="img/img_solution_02.png" alt="">
                         </li>
                         <li>
-                            <h3 class="tag blue">AI 학습</h3>
+                            <h3 class="tag ai">AI 학습</h3>
                             <img src="img/img_solution_03.png" alt="">
                         </li>
                     </ul>
@@ -209,22 +209,22 @@
         <section class="solution-detail">
             <div class="solution-detail-nav">
                 <div class="inner">
-                    <nav class="tab-list" aria-label="솔루션 유형">
+                    <nav class="tab-list">
                         <ul>
                             <li>
-                                <a href="#solution-phone" class="tab active" aria-current="page">
+                                <a href="#solution-phone" class="tab active phone" aria-current="page">
                                     <img src="img/img_solution_01.png" alt="" width="48" height="48">
                                     <span class="tab-label">1:1 전화/화상</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#solution-offline" class="tab">
+                                <a href="#solution-offline" class="tab offline">
                                     <img src="img/img_solution_02.png" alt="" width="48" height="48">
                                     <span class="tab-label">오프라인 출강</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#solution-ai" class="tab">
+                                <a href="#solution-ai" class="tab ai">
                                     <img src="img/img_solution_03.png" alt="" width="48" height="48">
                                     <span class="tab-label">AI 학습</span>
                                 </a>
@@ -233,104 +233,171 @@
                     </nav>
                 </div>
             </div>
-            <div class="solution-detail-01" id="solution-phone">
+            <div class="solution-detail-section phone">
                 <div class="inner">
+                    <div class="anchor" id="solution-phone"></div>
                     <ul>
                         <li class="card">
                             <div class="text-box">
-                                <h3 class="title">24/7 언제 어디서든 15초만에 연결</h3>
+                                <h3 class="title">24/7 언제 어디서든<br>15초만에 연결</h3>
                                 <ul>
-                                    <li>원하는 시간에 바로 수업을 시작할 수 있어요.</li>
-                                    <li>학습 계획에 맞춰 일정을 유연하게 조정할 수 있어요.</li>
+                                    <li>언제 어디서든, 원하는 시간에 바로 시작</li>
+                                    <li>학습 계획에 맞춰 원하는 날짜와 시간 지정 예약</li>
                                 </ul>
                             </div>
-                            <img src="img/img_solution_01_01.png" alt="">
+                            <div class="img"><img src="img/img_solution_01_01.png" alt=""></div>
                         </li>
                         <li class="card">
                             <div class="text-box">
-                                <h3 class="title">관심사·레벨·직무별 맞춤 토픽 2,400개+</h3>
+                                <h3 class="title">관심사 · 레벨 · 직무별<br>맞춤 토픽 2,400개+</h3>
                                 <ul>
-                                    <li>관심사·난이도·직무에 맞는 토픽을 골라 학습할 수 있어요.</li>
-                                    <li>모바일에서 카테고리별로 바로 탐색할 수 있어요.</li>
+                                    <li>업계 최다 2,400개+ 전문 커리큘럼</li>
+                                    <li>학습자 본인이 선택한 토픽으로 몰입도 향상</li>
                                 </ul>
                             </div>
-                            <img src="img/img_solution_01_02.png" alt="">
+                            <div class="img"><img src="img/img_solution_01_02.png" alt=""></div>
                         </li>
                         <li class="card">
                             <div class="text-box">
-                                <h3 class="title">학습자 목적에 맞는 강사 직접 선택</h3>
+                                <h3 class="title">학습자 목적에 맞는<br>강사 직접 선택</h3>
                                 <ul>
-                                    <li>프로필·후기·전문 분야를 보고 직접 선택할 수 있어요.</li>
-                                    <li>학습 목적에 맞는 강사를 비교해 볼 수 있어요.</li>
+                                    <li>강사의 전공, 경력, 수업 후기 등 투명하게 공개</li>
+                                    <li>학습 목적에 맞는 강사를 직접 선택</li>
                                 </ul>
                             </div>
-                            <img src="img/img_solution_01_03.png" alt="">
+                            <div class="img"><img src="img/img_solution_01_03.png" alt=""></div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="solution-detail-02" id="solution-offline">
+            <div class="solution-detail-section offline">
                 <div class="inner">
-                    <ul>
-                        <li class="card full">
-                            <h3 class="title">실제 업무 기반 맞춤 커리큘럼 설계</h3>
-                            <ul>
-                                <li>미션·과제 중심으로 실무에 바로 쓰이는 표현을 연습해요.</li>
-                                <li>계약·IR·미팅 등 실제 시나리오를 반영한 커리큘럼을 설계해요.</li>
-                            </ul>
-                            <img src="img/img_solution_02_01.png" alt="">
-                        </li>
-                        <li class="card">
-                            <h3 class="title">업종별 특화 학습 코스</h3>
-                            <ul>
-                                <li>IT·반도체·금융·제조 등 업종별로 특화된 코스를 제공해요.</li>
-                                <li>현장 용어·문서·실무 상황을 반영해요.</li>
-                            </ul>
-                            <img src="img/img_solution_02_02.png" alt="">
-                        </li>
-                        <li class="card">
-                            <h3 class="title">비즈니스 실전 어학 능력 평가</h3>
-                            <ul>
-                                <li>협상·회의 등 현장에서 필요한 응대 역량을 평가해요.</li>
-                                <li>학습 목표와 직무에 맞춘 피드백을 제공해요.</li>
-                            </ul>
-                            <img src="img/img_solution_02_03.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="solution-detail-03" id="solution-ai">
-                <div class="inner">
+                    <div class="anchor" id="solution-offline"></div>
                     <ul>
                         <li class="card full">
-                            <h3 class="title">직무 시나리오 기반 프리토킹·롤플레잉</h3>
-                            <ul>
-                                <li>협상·회의 등 직무 상황을 가정한 롤플레잉을 연습해요.</li>
-                                <li>실시간 피드백으로 표현을 다듬을 수 있어요.</li>
-                            </ul>
-                            <p class="tag red">직무·목적별 로드맵 제공</p>
-                            <img src="img/img_solution_03_01.png" alt="">
+                            <div class="text-box">
+                                <h3 class="title">실제 업무 기반<br>맞춤 커리큘럼 설계</h3>
+                                <ul>
+                                    <li>미팅을 통해 업종 · 직무 분석 및 맞춤 설계</li>
+                                    <li>계약서 검토, IR 발표, 해외 협상 등 실제 업무 시나리오 기반</li>
+                                </ul>
+                            </div>
+                            <div class="img"><img src="img/img_solution_02_01.png" alt=""></div>
                         </li>
                         <li class="card">
-                            <h3 class="title">맞춤 토픽 무제한 생성</h3>
-                            <ul>
-                                <li>목표에 맞춰 토픽을 자동으로 생성해요.</li>
-                                <li>직접 입력한 주제로도 학습할 수 있어요.</li>
-                                <li>반복 학습에 맞게 토픽을 확장할 수 있어요.</li>
-                            </ul>
-                            <img src="img/img_solution_03_02.png" alt="">
+                            <div class="text-box">
+                                <h3 class="title">업종별<br>특화 학습 코스</h3>
+                                <ul>
+                                    <li>IT, 방산, 항공, 간호 등 산업별 특화 코스 제공</li>
+                                    <li>현업에서 사용하는 비즈니스 커뮤니케이션 중심 학습</li>
+                                </ul>
+                            </div>
+                            <div class="img"><img src="img/img_solution_02_02.png" alt=""></div>
                         </li>
                         <li class="card">
-                            <h3 class="title">나만의 AI 튜터에게 걸려오는 전화</h3>
-                            <ul>
-                                <li>AI 튜터 페르소나를 설정해 몰입감 있게 연습해요.</li>
-                                <li>예약한 시간에 맞춰 전화 수업 알림을 받을 수 있어요.</li>
-                            </ul>
-                            <img src="img/img_solution_03_03.png" alt="">
+                            <div class="text-box">
+                                <h3 class="title">비즈니스 실전<br>어학 능력 평가</h3>
+                                <ul>
+                                    <li>단순 어학 점수를 넘어 현장 대응력 평가</li>
+                                    <li>협상 · 발표 · 미팅 등 비즈니스 상황 기반 진단</li>
+                                </ul>
+                            </div>
+                            <div class="img"><img src="img/img_solution_02_03.png" alt=""></div>
                         </li>
                     </ul>
                 </div>
             </div>
+            <div class="solution-detail-section ai">
+                <div class="inner">
+                    <div class="anchor" id="solution-ai"></div>
+                    <ul>
+                        <li class="card full">
+                            <div class="text-box">
+                                <h3 class="title">직무 시나리오 기반<br>프리토킹·롤플레잉</h3>
+                                <ul>
+                                    <li>협상, 미팅, 발표 등 직무 기반 대화 연습</li>
+                                    <li>코스를 따라 학습하며 실전 어학 역량을 효율적으로 향상</li>
+                                </ul>
+                                <p class="tag"><i class="icon flag"></i>직무·목적별 로드맵 제공</p>
+                            </div>
+                            <div class="img"><img src="img/img_solution_03_01.png" alt=""></div>
+                        </li>
+                        <li class="card">
+                            <div class="text-box">
+                                <h3 class="title">맞춤 토픽<br>무제한 생성</h3>
+                                <ul>
+                                    <li>학습자 대화 기반 토픽 자동 생성</li>
+                                    <li>원하는 주제 직접 제작 가능</li>
+                                    <li>고급 학습자도 만족하는 심화 대화</li>
+                                </ul>
+                            </div>
+                            <div class="img"><img src="img/img_solution_03_02.png" alt=""></div>
+                        </li>
+                        <li class="card">
+                            <div class="text-box">
+                                <h3 class="title">나만의 AI 튜터에게<br>걸려오는 전화</h3>
+                                <ul>
+                                    <li>원하는 페르소나의 AI 튜터 직접 설정</li>
+                                    <li>지정한 시간에 AI가 먼저 전화해 자연스러운 학습 습관 형성</li>
+                                </ul>
+                            </div>
+                            <div class="img"><img src="img/img_solution_03_03.png" alt=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="design">
+            <div class="inner">
+                <h2 class="title">기업에 맞는 교육 설계</h2>
+                <div class="design-box">
+                    <div class="design-box-visual">
+                        <button class="phone active"></button>
+                        <button class="offline"></button>
+                        <button class="ai"></button>
+                    </div>
+                    <div class="design-box-item">
+                        <ul>
+                            <li class="track01 active">
+                                <div class="caption">TRACK 1</div>
+                                <h3 class="title">단기 집중형</h3>
+                                <p class="description">8주 내 고밀도 실전 회화 훈련</p>
+                                <div class="recommend">
+                                    <div class="tag"><i class="icon thumb-up"></i>추천</div>
+                                    <p>해외 주재 예정자 · 글로벌 핵심 인재</p>
+                                </div>
+                            </li>
+                            <li class="track02">
+                                <div class="caption">TRACK 2</div>
+                                <h3 class="title">스피킹 연계형</h3>
+                                <p class="description">업종 맞춤형</p>
+                                <div class="recommend">
+                                    <div class="tag"><i class="icon thumb-up"></i>추천</div>
+                                    <p>전사 일반 임직원 · 초/중급 학습자</p>
+                                </div>
+                            </li>
+                            <li class="track03">
+                                <div class="caption">TRACK 3</div>
+                                <h3 class="title">스피킹 연계형</h3>
+                                <p class="description">업종 맞춤형</p>
+                                <div class="recommend">
+                                    <div class="tag"><i class="icon thumb-up"></i>추천</div>
+                                    <p>전사 일반 임직원 · 초/중급 학습자</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="design-box-dot-list" role="tablist" aria-label="교육 트랙">
+                        <button type="button" class="design-box-dot active" aria-selected="true"
+                            aria-label="트랙 1"></button>
+                        <button type="button" class="design-box-dot" aria-selected="false" aria-label="트랙 2"></button>
+                        <button type="button" class="design-box-dot" aria-selected="false" aria-label="트랙 3"></button>
+                    </div>
+                </div>
+                <p class="design-subcopy">원어민 1:1 회화 · 출강 · AI 학습을 결합해<br>기업의 교육 목적과 구성원 수준에 맞는 최적의 교육 플랜을 제안합니다.</p>
+                <div class="design-cta">
+                    <button type="button" class="btn gradient">우리 회사에 맞는 교육 플랜 제안받기</button>
+                </div>
         </section>
     </main>
     <footer class="footer">
@@ -340,6 +407,166 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            /* ── solution-detail 탭: 활성 + 스무스 스크롤 ── */
+            var tabs = document.querySelectorAll('.solution-detail-nav .tab-list a.tab');
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function (e) {
+                    var id = tab.getAttribute('href');
+                    if (!id || id.charAt(0) !== '#') return;
+
+                    var target = document.querySelector(id);
+                    if (target) {
+                        e.preventDefault();
+                        tabs.forEach(function (t) {
+                            t.classList.remove('active');
+                            t.removeAttribute('aria-current');
+                        });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-current', 'page');
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        if (history.replaceState) {
+                            history.replaceState(null, '', id);
+                        }
+                    } else {
+                        tabs.forEach(function (t) {
+                            t.classList.remove('active');
+                            t.removeAttribute('aria-current');
+                        });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-current', 'page');
+                    }
+                });
+            });
+            var sections = [
+                document.querySelector('.solution-detail-section.phone'),
+                document.querySelector('.solution-detail-section.offline'),
+                document.querySelector('.solution-detail-section.ai')
+            ];
+            var tabs = document.querySelectorAll('.solution-detail-nav .tab-list a.tab');
+            if (tabs.length !== sections.length) return;
+            function setActiveTabByIndex(index) {
+                if (index < 0 || index >= tabs.length) return;
+                tabs.forEach(function (t, i) {
+                    var on = i === index;
+                    t.classList.toggle('active', on);
+                    if (on) {
+                        t.setAttribute('aria-current', 'page');
+                    } else {
+                        t.removeAttribute('aria-current');
+                    }
+                });
+            }
+            // 헤더·스티키 탭 높이에 맞게 rootMargin 조절 (필요 시 -40% 등으로 변경)
+            var tabObserver = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        var idx = sections.indexOf(entry.target);
+                        if (idx !== -1) {
+                            setActiveTabByIndex(idx);
+                        }
+                    });
+                },
+                {
+                    root: null,
+                    rootMargin: '-50% 0px -50% 0px',
+                    threshold: 0
+                }
+            );
+            sections.forEach(function (sec) {
+                if (sec) tabObserver.observe(sec);
+            });
+
+            /* ── 디자인 섹션 보이면 상단 탭 바 숨김 ── */
+            var nav = document.querySelector('.solution-detail-nav');
+            var designSection = document.querySelector('section.design');
+            if (nav && designSection) {
+                var navObserver = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                nav.classList.add('is-hidden');
+                            } else {
+                                nav.classList.remove('is-hidden');
+                            }
+                        });
+                    },
+                    { root: null, rootMargin: '0px 0px -50% 0px', threshold: 0 }
+                );
+                navObserver.observe(designSection);
+            }
+
+            /* ── design-box: 비주얼 + 트랙 리스트 + 닷 (하나의 setActive) ── */
+            var visual = document.querySelector('.design-box-visual');
+            var box = document.querySelector('.design-box-item ul');
+            var dots = document.querySelectorAll('.design-box-dot-list .design-box-dot');
+            if (!visual || !box) return;
+
+            var buttons = visual.querySelectorAll('button');
+            var items = box.querySelectorAll('li');
+            var n = buttons.length;
+            if (n === 0 || items.length !== n || dots.length !== n) return;
+
+            var current = 0;
+            var AUTO_MS = 3000;
+            var timerId = null;
+
+            function setActive(index) {
+                current = ((index % n) + n) % n;
+                buttons.forEach(function (btn, i) {
+                    btn.classList.toggle('active', i === current);
+                });
+                items.forEach(function (li, i) {
+                    li.classList.toggle('active', i === current);
+                });
+                dots.forEach(function (dot, i) {
+                    var on = i === current;
+                    dot.classList.toggle('active', on);
+                    dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+            }
+
+            function stopAuto() {
+                if (timerId !== null) {
+                    window.clearInterval(timerId);
+                    timerId = null;
+                }
+            }
+
+            function startAuto() {
+                stopAuto();
+                timerId = window.setInterval(function () {
+                    setActive(current + 1);
+                }, AUTO_MS);
+            }
+
+            buttons.forEach(function (btn, i) {
+                btn.addEventListener('click', function () {
+                    setActive(i);
+                    startAuto();
+                });
+            });
+
+            items.forEach(function (li, i) {
+                li.addEventListener('click', function () {
+                    setActive(i);
+                    startAuto();
+                });
+            });
+
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () {
+                    setActive(i);
+                    startAuto();
+                });
+            });
+
+            setActive(0);
+            startAuto();
+        });
+    </script>
 </body>
 
 </html>

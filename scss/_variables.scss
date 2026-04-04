@@ -114,8 +114,6 @@
     line-height: 18px;
 }
 
-
-
 @mixin h5 {
     font-size: 12px;
     font-weight: 700;
@@ -200,15 +198,15 @@
     line-height: 12px;
 }
 
-@mixin shadow__05dp {
+@mixin shadow-05dp {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-@mixin shadow__1dp {
+@mixin shadow-1dp {
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.16), 0px 0px 4px rgba(0, 0, 0, 0.08);
 }
 
-@mixin shadow__2dp {
+@mixin shadow-2dp {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16), 0px 4px 16px rgba(0, 0, 0, 0.16);
 }
 
@@ -295,13 +293,13 @@ p,
 }
 
 .shadow__05dp {
-    @include shadow__05dp;
+    @include shadow-05dp;
 }
 
 .shadow__1dp {
-    @include shadow__1dp;
+    @include shadow-1dp;
 }
 
 .shadow__2dp {
-    @include shadow__2dp;
+    @include shadow-2dp;
 }
