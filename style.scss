@@ -260,7 +260,6 @@ $title-fs: 48;
 
 .main {
     padding-top: calc(#{$announcement-bar-height} + #{$header-height});
-    overflow: hidden;
 
     .btn {
         @include h2-5;
@@ -278,6 +277,7 @@ $title-fs: 48;
         justify-content: center;
         align-items: center;
         padding: $section-padding-top-bottom 0;
+        overflow: hidden;
     }
 
     &-visual {
@@ -1078,6 +1078,7 @@ $title-fs: 48;
 
     .inner {
         padding: $section-padding-top-bottom 0;
+        overflow: hidden;
     }
 
     &-box {
@@ -1128,6 +1129,7 @@ $title-fs: 48;
         &-item {
             position: relative;
             margin-top: calc($visual-size*-0.3px);
+            margin-left: -$section-padding-left-right-mobile;
 
             ul {
                 display: flex;
@@ -1209,12 +1211,12 @@ $title-fs: 48;
             }
 
             @media (max-width: $breakpoint-01) {
-                padding: 0 var(--spacing-l);
                 width: 100vw;
                 overflow-x: auto;
-
+                
                 ul {
-                    width: fit-content;
+                    width: max-content;
+                    padding: 0 $section-padding-left-right-mobile;
                     justify-content: flex-start;
                 }
             }

@@ -518,7 +518,6 @@ table {
 
 .main {
   padding-top: calc(48px + 72px);
-  overflow: hidden;
 }
 .main .btn {
   font-size: 18px;
@@ -534,6 +533,7 @@ table {
   justify-content: center;
   align-items: center;
   padding: 88px 0;
+  overflow: hidden;
 }
 .hero-visual {
   position: relative;
@@ -1161,6 +1161,7 @@ table {
 }
 .design .inner {
   padding: 88px 0;
+  overflow: hidden;
 }
 .design-box-visual {
   position: relative;
@@ -1201,6 +1202,7 @@ table {
 .design-box-item {
   position: relative;
   margin-top: -96px;
+  margin-left: -24px;
 }
 .design-box-item ul {
   display: flex;
@@ -1269,13 +1271,13 @@ table {
 }
 @media (max-width: 768px) {
   .design-box-item {
-    padding: 0 var(--spacing-l);
     width: 100vw;
     overflow-x: auto;
   }
   .design-box-item ul {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 24px;
     justify-content: flex-start;
   }
 }
