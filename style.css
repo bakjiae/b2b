@@ -930,7 +930,7 @@ p,
   align-items: center;
   justify-content: center;
   gap: 1.1666666667em;
-  padding: 1.6666666667em 1.1666666667em 1.1666666667em;
+  padding: 88px 1.1666666667em;
   border-radius: 1.5em;
   background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.2)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.2)) 96.73%), var(--Opacity-Black, #121214);
 }
@@ -1435,7 +1435,7 @@ p,
 }
 
 .process .inner {
-  padding: 88px 0;
+  padding: 0 0 88px;
 }
 @media (max-width: 440px) {
   .process .inner {
@@ -1451,7 +1451,7 @@ p,
   align-items: center;
   justify-content: center;
   gap: 1.1666666667em;
-  padding: 1.6666666667em 1.1666666667em 1.1666666667em;
+  padding: 88px 1.1666666667em;
   border-radius: 1.5em;
   background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.2)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.2)) 96.73%), var(--Opacity-Black, #121214);
   color: var(--opacity-white);
@@ -1485,16 +1485,25 @@ p,
   width: 100%;
   text-align: left;
 }
+.process-nav-note {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--opacity-white600);
+  margin: 0;
+}
 .process-step {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-s);
-  padding: 0 var(--spacing-s);
+  padding: var(--spacing-s);
   border-radius: var(--radius-m);
 }
-
-.process .process-step .process-step-num {
+.process-step.active {
+  background: var(--opacity-white100);
+}
+.process-step-num {
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -1508,68 +1517,68 @@ p,
   background: linear-gradient(135deg, var(--primary-400) 0%, var(--success-400) 100%), var(--success-500);
   color: var(--opacity-black);
 }
-.process .process-step .process-step-label {
+.process-step-label {
   flex: 1;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
 }
-.process .process-step.active {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  background: var(--opacity-white100);
-}
-.process .process-nav-note {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: var(--opacity-white600);
-  margin: 0;
-}
-.process .process-panel-list {
-  flex: 1;
-  min-width: 0;
-  position: relative;
-}
-.process .process-panel {
+.process-panel {
   border-radius: var(--radius-xl);
   background: var(--opacity-white);
   color: var(--opacity-black);
   padding: 72px;
 }
-.process .process-panel[hidden] {
+.process-panel[hidden] {
   display: none !important;
 }
-.process .process-panel.active {
+.process-panel.active {
   display: block;
 }
-.process .process-panel-inner {
+.process-panel-inner {
   display: flex;
   align-items: center;
   gap: var(--spacing-xl);
   min-width: 0;
 }
-.process .process-panel-text {
+.process-panel-list {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+.process-panel-text {
   flex: 1;
   min-width: 0;
 }
-.process .process-panel-heading {
+.process-panel-heading {
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
   margin: 0 0 var(--spacing-m);
 }
-.process .process-panel-desc {
+.process-panel-desc {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 var(--spacing-xl);
   color: var(--opacity-black600);
 }
-.process .process-panel-desc + .process .process-panel-desc {
+.process-panel-desc + .process-panel-desc {
   margin-top: calc(var(--spacing-m) * -1);
 }
-.process .process-tag-list {
+@media (max-width: 768px) {
+  .process-layout {
+    flex-direction: column;
+  }
+  .process-nav {
+    max-width: unset;
+  }
+  .process-nav ol {
+    flex-direction: row;
+  }
+}
+
+.process-tag-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1577,7 +1586,7 @@ p,
   flex-direction: column;
   gap: var(--spacing-xs);
 }
-.process .process-tag-list .tag {
+.process-tag-list .tag {
   display: inline-flex;
   width: -moz-fit-content;
   width: fit-content;
@@ -1590,11 +1599,11 @@ p,
   font-weight: 500;
   line-height: 16px;
 }
-.process .process-panel-visual {
+.process-panel-visual {
   flex: 0 0 auto;
   max-width: 45%;
 }
-.process .process-panel-visual img {
+.process-panel-visual img {
   display: block;
   width: 100%;
   height: auto;
@@ -2176,7 +2185,8 @@ p,
 
 .pilot {
   padding: 88px 0;
-  background: #7b3ff2; /* 시안 보라 — 토큰에 맞추려면 var(--primary-500) 등으로 교체 가능 */
+  background: #7b3ff2;
+  /* 시안 보라 — 토큰에 맞추려면 var(--primary-500) 등으로 교체 가능 */
 }
 .pilot-layout {
   display: flex;
