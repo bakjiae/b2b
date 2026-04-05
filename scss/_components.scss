@@ -1,0 +1,187 @@
+@use 'variables' as *;
+
+.icon {
+    flex: none;
+    display: block;
+    width: 1.5em;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.flag {
+        background-image: url('img/ic_flag_color.svg');
+    }
+
+    &.thumb-up {
+        background-image: url('img/ic_thumbup_line.svg');
+    }
+}
+
+.btn {
+    position: relative;
+    display: flex;
+    height: var(--height-l);
+    padding: var(--spacing-xxs) var(--spacing-m);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+    border-radius: var(--radius-round);
+    background: var(--primary-500);
+    color: var(--opacity-white);
+
+    &:hover,
+    &:active {
+        /* Sass lighten/darken은 CSS var를 색상으로 해석할 수 없어 컴파일 에러가 납니다. */
+        /* 대신 런타임에서 동작하는 color-mix를 사용합니다. */
+        background: color-mix(in srgb, var(--primary-500) 90%, white 10%);
+    }
+
+    &:disabled {
+        background-blend-mode: var(--gray-500);
+    }
+
+    &.gradient {
+        overflow: hidden;
+        background: transparent;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 1000%;
+            top: 50%;
+            left: 50%;
+            background: linear-gradient(96deg, var(--primary-500) 45%, var(--success-600) 100%);
+            transform: translate(-50%, -50%) rotate(0deg);
+            transition: transform 0.5s ease;
+            z-index: -1;
+        }
+
+        &:hover,
+        &:active {
+            &::before {
+                transform: translate(-50%, -50%) rotate(120deg) scale(1.2);
+            }
+        }
+    }
+
+    &.border {
+        background: var(--opacity-white);
+        border: 1px solid var(--opacity-black100);
+        color: var(--opacity-black);
+
+        &:hover,
+        &:active {
+            background: color-mix(in srgb, var(--opacity-white) 97%, var(--opacity-black) 3%);
+        }
+    }
+
+    &.ghost {
+        background: transparent;
+        color: var(--opacity-black);
+
+        &:hover,
+        &:active {
+            color: var(--primary-500);
+        }
+    }
+
+}
+
+$f-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%235E5A66' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+.f-lbl {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--gray-800);
+    @include body2b;
+
+    .req {
+        margin-left: 2px;
+        color: var(--infomation-600);
+        font-weight: 700;
+    }
+}
+
+.f-inp,
+.f-sel,
+.f-ta {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-s) var(--spacing-m);
+    border: 1px solid var(--gray-400);
+    border-radius: var(--radius-m);
+    background: var(--opacity-white);
+    color: var(--gray-800);
+    @include body2;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &::placeholder {
+        color: var(--gray-500);
+    }
+
+    &:hover {
+        border-color: var(--gray-500);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--primary-500);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-500) 20%, transparent);
+    }
+
+    &:disabled {
+        background: var(--gray-200);
+        cursor: not-allowed;
+    }
+}
+
+.f-inp {
+    min-height: var(--height-l);
+}
+
+.f-sel {
+    min-height: var(--height-l);
+    appearance: none;
+    padding-right: calc(var(--spacing-m) + 24px);
+    background-image: $f-select-arrow;
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-s) center;
+    background-size: 16px 16px;
+    cursor: pointer;
+    color: var(--gray-800);
+
+    &:invalid {
+        color: var(--gray-500);
+    }
+}
+
+.f-ta {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.f-opts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-s) var(--spacing-l);
+
+    label {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        cursor: pointer;
+        color: var(--gray-800);
+        @include body2;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        flex: none;
+        width: 18px;
+        height: 18px;
+        accent-color: var(--primary-500);
+        cursor: pointer;
+    }
+}
