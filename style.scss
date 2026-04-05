@@ -811,7 +811,7 @@ $title-fs: 48;
                             top: 0;
                             left: 0;
                             width: 100%;
-                            aspect-ratio: 1 / 1;
+                            height: 100%;
                             background: linear-gradient(261deg, rgba(255, 255, 255, 0.00) 19.09%, #FFF 88.15%), linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 93.13%);
                         }
                     }
@@ -879,12 +879,6 @@ $title-fs: 48;
             visibility: hidden;
             pointer-events: none;
             transition: all 0.2s ease;
-        }
-
-        @media (max-width: $breakpoint-01) {
-            .inner {
-                padding: var(--spacing-m) 0;
-            }
         }
     }
 
@@ -1191,134 +1185,95 @@ $title-fs: 48;
     @extend .layout;
     @extend .responsive-size;
 
-    &-box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: calc(56/$title-fs*1em);
-        border-radius: calc(72/$title-fs*1em);
-        background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.20)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.20)) 96.73%), var(--Opacity-Black, #121214);
-        color: var(--opacity-white);
+    .inner {
+        padding: $section-padding-top-bottom 0;
+
+        @media (max-width: $breakpoint-02) {
+            padding: $section-padding-top-bottom 0 !important;
+        }
     }
 
     h2 {
         @extend .title;
         text-align: center;
-        margin-bottom: var(--spacing-m);
     }
 
-    .process-nav {
+    &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: calc(56/$title-fs*1em);
+        padding: calc(80/$title-fs*1em) calc(56/$title-fs*1em) calc(56/$title-fs*1em);
+        border-radius: calc(72/$title-fs*1em);
+        background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.20)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.20)) 96.73%), var(--Opacity-Black, #121214);
+        color: var(--opacity-white);
+    }
+
+    &-layout {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: calc(56/$title-fs*1em);
+    }
+
+    &-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: var(--spacing-s);
         margin-bottom: var(--spacing-l);
+        max-width: 240px;
 
         ol {
             display: flex;
+            flex-direction: column;
             gap: var(--spacing-s);
             flex-wrap: wrap;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: var(--spacing-s);
+                width: 100%;
+                text-align: left;
+            }
         }
     }
 
-    .process-step {
+    &-step {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: var(--spacing-s);
+        padding: 0 var(--spacing-s);
+        border-radius: var(--radius-m);
     }
 }
 
 // 운영 프로세스 (목업: 좌 307px / 간격 41px / 우 패널 패딩 72px)
 .process {
-    @extend .layout;
-
-    >.inner {
-        padding: $section-padding-top-bottom 0;
-        min-width: 0;
-    }
-
-    // 바깥: 둥근 그라데이션 박스
-    >.inner>.process-box {
-        display: flex;
-        flex-direction: column;
-        gap: calc(56 / $title-fs * 1em);
-        padding: calc(80 / $title-fs * 1em) calc(56 / $title-fs * 1em) calc(56 / $title-fs * 1em);
-        border-radius: calc(72 / $title-fs * 1em);
-        background:
-            linear-gradient(100deg,
-                rgba(102, 45, 223, 0.2) 3.27%,
-                rgba(6, 191, 157, 0.2) 96.73%),
-            #121214;
-        color: var(--opacity-white);
-    }
-
-    >.inner>.process-box>.title {
-        @extend .title;
-        text-align: center;
-        margin: 0;
-    }
-
-    // 안쪽: 좌 스텝 / 우 패널
-    >.inner>.process-box>.process-box {
-        display: flex;
-        align-items: stretch;
-        gap: 41px;
-        width: 100%;
-        min-width: 0;
-    }
-
-    .process-nav {
-        flex: 0 0 307px;
-        width: 307px;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-l);
-
-        ol {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-xxs);
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-    }
 
     .process-step {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-s);
-        width: 100%;
-        padding: 0 var(--spacing-s);
-        border: 0;
-        border-radius: var(--radius-m);
-        background: transparent;
-        color: inherit;
-        font: inherit;
-        text-align: left;
-        cursor: pointer;
-        transition: background 0.2s ease;
 
         .process-step-num {
+            @include body2b;
             flex: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 28px;
-            height: 28px;
+            width: 2em;
+            aspect-ratio: 1 / 1;
             border-radius: var(--radius-round);
-            background: var(--opacity-white100);
-            font-weight: 700;
-            font-size: 14px;
+            background: linear-gradient(135deg, var(--primary-400) 0%, var(--success-400) 100%), var(--success-500);
+            color: var(--opacity-black);
         }
 
         .process-step-label {
             flex: 1;
-            @include body1; // 또는 프로젝트에 맞는 믹스인
+            @include body1b;
         }
 
         &.active {
