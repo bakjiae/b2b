@@ -165,24 +165,28 @@
         </section>
         <section class="metric">
             <div class="inner">
-                <ul>
-                    <li class="metric-card mint start">
-                        <p class="metric-label body1b">누적 이용자</p>
-                        <p class="metric-value h1">300만+</p>
-                    </li>
-                    <li class="metric-card cream start">
-                        <p class="metric-label body1b">누적 고객사</p>
-                        <p class="metric-value h1">580개+</p>
-                    </li>
-                    <li class="metric-card mint end">
-                        <p class="metric-label body1b">서비스 운영</p>
-                        <p class="metric-value h1">9년+</p>
-                    </li>
-                    <li class="metric-card cream end">
-                        <p class="metric-label body1b">업계 최다 커리큘럼</p>
-                        <p class="metric-value h1">2,400개+</p>
-                    </li>
-                </ul>
+                <div class="metric-list">
+                    <div class="metric-column first">
+                        <div class="metric-card mint start">
+                            <p class="metric-label body1b">누적 이용자</p>
+                            <p class="metric-value h1">300만+</p>
+                        </div>
+                        <div class="metric-card cream start">
+                            <p class="metric-label body1b">누적 고객사</p>
+                            <p class="metric-value h1">580개+</p>
+                        </div>
+                    </div>
+                    <div class="metric-column last">
+                        <div class="metric-card mint end">
+                            <p class="metric-label body1b">서비스 운영</p>
+                            <p class="metric-value h1">9년+</p>
+                        </div>
+                        <div class="metric-card cream end">
+                            <p class="metric-label body1b">업계 최다 커리큘럼</p>
+                            <p class="metric-value h1">2,400개+</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="solution">
@@ -444,95 +448,99 @@
                         </nav>
                         <div class="process-panel-list" id="process-panel-list">
                             <div class="process-panel-track">
-                            <div id="process-panel-01" class="process-panel" role="tabpanel"
-                                aria-labelledby="process-tab-01" data-panel="01" aria-hidden="false">
-                                <div class="process-panel-inner">
-                                    <div class="process-panel-text">
-                                        <h3 class="process-panel-heading">결정 전에 먼저 경험해 보세요</h3>
-                                        <p class="process-panel-desc">2주 동안 무료로 파일럿을 운영하며, 임직원 반응과 운영 가능성을 직접 확인하실 수
-                                            있습니다.</p>
-                                        <ul class="process-tag-list">
-                                            <li><span class="tag">2주 무료 파일럿 체험 제공</span></li>
-                                            <li><span class="tag">1:1 전화/화상 및 AI 학습 가능</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="process-panel-visual">
-                                        <div class="img"><img src="img/img_process_01.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="process-panel-02" class="process-panel" role="tabpanel" data-panel="02" aria-hidden="true">
-                                <div class="process-panel-inner">
-                                    <div class="process-panel-text">
-                                        <h3 class="process-panel-heading">HR 전용 시스템으로 간편하게</h3>
-                                        <p class="process-panel-desc">
-                                            복잡한 절차 없이 전용 어드민 시스템에서<br>과정 선택과 신청을 바로 진행할 수 있습니다.
-                                        </p>
-                                        <ul class="process-tag-list">
-                                            <li><span class="tag">HR 관리자 계정 제공</span></li>
-                                            <li><span class="tag">전용 수강신청 페이지에서 니즈에 맞는 과정 선택 가능</span></li>
-                                            <li><span class="tag">임직원 배포용 서비스 가이드 제공</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="process-panel-visual">
-                                        <div class="img"><img src="img/img_process_02.png" alt=""></div>
+                                <div id="process-panel-01" class="process-panel" role="tabpanel"
+                                    aria-labelledby="process-tab-01" data-panel="01" aria-hidden="false">
+                                    <div class="process-panel-inner">
+                                        <div class="process-panel-text">
+                                            <h3 class="process-panel-heading">결정 전에 먼저 경험해 보세요</h3>
+                                            <p class="process-panel-desc">2주 동안 무료로 파일럿을 운영하며, 임직원 반응과 운영 가능성을 직접 확인하실 수
+                                                있습니다.</p>
+                                            <ul class="process-tag-list">
+                                                <li><span class="tag">2주 무료 파일럿 체험 제공</span></li>
+                                                <li><span class="tag">1:1 전화/화상 및 AI 학습 가능</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="process-panel-visual">
+                                            <div class="img"><img src="img/img_process_01.png" alt=""></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="process-panel-03" class="process-panel" role="tabpanel" data-panel="03" aria-hidden="true">
-                                <div class="process-panel-inner">
-                                    <div class="process-panel-text">
-                                        <h3 class="process-panel-heading">정확하게 진단하고 시작합니다</h3>
-                                        <p class="process-panel-desc">
-                                            사전 레벨 테스트로 학습자의 현재 수준을 진단하고 개인에게 최적화된 커리큘럼을 배정합니다.
-                                        </p>
-                                        <ul class="process-tag-list">
-                                            <li><span class="tag">사전 레벨 테스트로 개인별 수준 진단</span></li>
-                                            <li><span class="tag">이메일 · 카카오톡으로 앱 설치 및 온보딩 안내</span></li>
-                                            <li><span class="tag">전담 매니저의 지속적인 운영 지원</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="process-panel-visual">
-                                        <div class="img"><img src="img/img_process_03.png" alt=""></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="process-panel-04" class="process-panel" role="tabpanel" data-panel="04" aria-hidden="true">
-                                <div class="process-panel-inner">
-                                    <div class="process-panel-text">
-                                        <h3 class="process-panel-heading">수강률을 직접 끌어올립니다</h3>
-                                        <p class="process-panel-desc">
-                                            담당자는 실시간 대시보드만 확인하시면 됩니다. 전담 매니저가 학습 참여를 지속적으로 관리하고 독려합니다.
-                                        </p>
-                                        <ul class="process-tag-list">
-                                            <li><span class="tag">개인별 수강률 · 수료율 실시간 조회 가능</span></li>
-                                            <li><span class="tag">앱 푸시 · 이메일 · 카카오톡으로 미수강자 학습독려</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="process-panel-visual">
-                                        <div class="img"><img src="img/img_process_04.png" alt=""></div>
+                                <div id="process-panel-02" class="process-panel" role="tabpanel" data-panel="02"
+                                    aria-hidden="true">
+                                    <div class="process-panel-inner">
+                                        <div class="process-panel-text">
+                                            <h3 class="process-panel-heading">HR 전용 시스템으로 간편하게</h3>
+                                            <p class="process-panel-desc">
+                                                복잡한 절차 없이 전용 어드민 시스템에서<br>과정 선택과 신청을 바로 진행할 수 있습니다.
+                                            </p>
+                                            <ul class="process-tag-list">
+                                                <li><span class="tag">HR 관리자 계정 제공</span></li>
+                                                <li><span class="tag">전용 수강신청 페이지에서 니즈에 맞는 과정 선택 가능</span></li>
+                                                <li><span class="tag">임직원 배포용 서비스 가이드 제공</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="process-panel-visual">
+                                            <div class="img"><img src="img/img_process_02.png" alt=""></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="process-panel-05" class="process-panel" role="tabpanel" data-panel="05" aria-hidden="true">
-                                <div class="process-panel-inner">
-                                    <div class="process-panel-text">
-                                        <h3 class="process-panel-heading">성과를 데이터로 증명합니다</h3>
-                                        <p class="process-panel-desc">
-                                            수강 종료 후 사후 레벨 테스트를 진행하고
-                                            학습 성과를 종합 분석한 결과 보고서를 제공합니다.
-                                        </p>
-                                        <ul class="process-tag-list">
-                                            <li><span class="tag">사전 · 사후 레벨 테스트 분석</span></li>
-                                            <li><span class="tag">출결, 성취도, 만족도 분석 및 주요 인사이트 제공</span></li>
-                                            <li><span class="tag">다음 과정 추천 및 방향 안내</span></li>
-                                        </ul>
-                                    </div>
-                                    <div class="process-panel-visual">
-                                        <div class="img"><img src="img/img_process_05.png" alt=""></div>
+                                <div id="process-panel-03" class="process-panel" role="tabpanel" data-panel="03"
+                                    aria-hidden="true">
+                                    <div class="process-panel-inner">
+                                        <div class="process-panel-text">
+                                            <h3 class="process-panel-heading">정확하게 진단하고 시작합니다</h3>
+                                            <p class="process-panel-desc">
+                                                사전 레벨 테스트로 학습자의 현재 수준을 진단하고 개인에게 최적화된 커리큘럼을 배정합니다.
+                                            </p>
+                                            <ul class="process-tag-list">
+                                                <li><span class="tag">사전 레벨 테스트로 개인별 수준 진단</span></li>
+                                                <li><span class="tag">이메일 · 카카오톡으로 앱 설치 및 온보딩 안내</span></li>
+                                                <li><span class="tag">전담 매니저의 지속적인 운영 지원</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="process-panel-visual">
+                                            <div class="img"><img src="img/img_process_03.png" alt=""></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div id="process-panel-04" class="process-panel" role="tabpanel" data-panel="04"
+                                    aria-hidden="true">
+                                    <div class="process-panel-inner">
+                                        <div class="process-panel-text">
+                                            <h3 class="process-panel-heading">수강률을 직접 끌어올립니다</h3>
+                                            <p class="process-panel-desc">
+                                                담당자는 실시간 대시보드만 확인하시면 됩니다. 전담 매니저가 학습 참여를 지속적으로 관리하고 독려합니다.
+                                            </p>
+                                            <ul class="process-tag-list">
+                                                <li><span class="tag">개인별 수강률 · 수료율 실시간 조회 가능</span></li>
+                                                <li><span class="tag">앱 푸시 · 이메일 · 카카오톡으로 미수강자 학습독려</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="process-panel-visual">
+                                            <div class="img"><img src="img/img_process_04.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="process-panel-05" class="process-panel" role="tabpanel" data-panel="05"
+                                    aria-hidden="true">
+                                    <div class="process-panel-inner">
+                                        <div class="process-panel-text">
+                                            <h3 class="process-panel-heading">성과를 데이터로 증명합니다</h3>
+                                            <p class="process-panel-desc">
+                                                수강 종료 후 사후 레벨 테스트를 진행하고
+                                                학습 성과를 종합 분석한 결과 보고서를 제공합니다.
+                                            </p>
+                                            <ul class="process-tag-list">
+                                                <li><span class="tag">사전 · 사후 레벨 테스트 분석</span></li>
+                                                <li><span class="tag">출결, 성취도, 만족도 분석 및 주요 인사이트 제공</span></li>
+                                                <li><span class="tag">다음 과정 추천 및 방향 안내</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="process-panel-visual">
+                                            <div class="img"><img src="img/img_process_05.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -582,51 +590,35 @@
         </section>
         <section class="compare">
             <div class="inner">
-                <h2 class="title">다른 서비스와 무엇이 다른가요?</h2>
+                <h2 class="title">다른 서비스와<br>무엇이 다른가요?</h2>
                 <div class="compare-scroll">
                     <div class="compare-board">
-                        <div class="compare-cell head"></div>
-                        <div class="compare-cell head">
-                            <div class="compare-brand">
+                        <div class="compare-column question">
+                            <div class="compare-cell head"></div>
+                            <div class="compare-cell"><i>Q.</i> 1:1 회화 · 출강 · AI 학습간 연계가 가능한가요?</div>
+                            <div class="compare-cell"><i>Q.</i> 수업 방식이 달라도 같은 주제로 학습할 수 있나요?</div>
+                            <div class="compare-cell"><i>Q.</i> 직무 · 경력 · 학습 목적에 맞춰 강사를 직접 선택할 수 있나요?</div>
+                            <div class="compare-cell"><i>Q.</i> 예약 수업 외에 실시간 수업도 지원하나요?</div>
+                            <div class="compare-cell"><i>Q.</i> 고급 학습자도 만족하는 심화 AI 학습이 가능한가요?</div>
+                        </div>
+                        <div class="compare-column highlight">
+                            <div class="compare-cell head brand">
                                 <img src="img/logo_lingora_tutoring.svg" alt="Lingora" class="compare-logo">
                             </div>
+                            <div class="compare-cell">온 · 오프라인 학습 연계</div>
+                            <div class="compare-cell">일관된 커리큘럼으로 학습</div>
+                            <div class="compare-cell">목적에 맞는 강사 직접 선택</div>
+                            <div class="compare-cell">실시간 · 예약 수업 모두 지원</div>
+                            <div class="compare-cell">심화 주제 프리토킹 · 롤플레잉</div>
                         </div>
-                        <div class="compare-cell head dim">일반 어학 서비스</div>
-
-                        <div class="compare-cell dim">Q. 1:1 회화 · 출강 · AI 학습간 연계가 가능한가요?</div>
-                        <div class="compare-cell highlight">
-                            <span class="check"></span>
-                            온 · 오프라인 학습 연계
+                        <div class="compare-column dim">
+                            <div class="compare-cell head">일반 어학 서비스</div>
+                            <div class="compare-cell">각 채널 독립적 운영</div>
+                            <div class="compare-cell">수업 방식별 커리큘럼 분리</div>
+                            <div class="compare-cell">시스템 자동 배정</div>
+                            <div class="compare-cell">사전 예약제만 운영</div>
+                            <div class="compare-cell">초/중급 중심 단순 회화</div>
                         </div>
-                        <div class="compare-cell dim">각 채널 독립적 운영</div>
-
-                        <div class="compare-cell dim">Q. 수업 방식이 달라도 같은 주제로 학습할 수 있나요?</div>
-                        <div class="compare-cell highlight">
-                            <span class="check"></span>
-                            일관된 커리큘럼으로 학습
-                        </div>
-                        <div class="compare-cell dim">수업 방식별 커리큘럼 분리</div>
-
-                        <div class="compare-cell dim">Q. 직무 · 경력 · 학습 목적에 맞춰 강사를 직접 선택할 수 있나요?</div>
-                        <div class="compare-cell highlight">
-                            <span class="check"></span>
-                            목적에 맞는 강사 직접 선택
-                        </div>
-                        <div class="compare-cell dim">시스템 자동 배정</div>
-
-                        <div class="compare-cell dim">Q. 예약 수업 외에 실시간 수업도 지원하나요?</div>
-                        <div class="compare-cell highlight">
-                            <span class="check"></span>
-                            실시간 · 예약 수업 모두 지원
-                        </div>
-                        <div class="compare-cell dim">사전 예약제만 운영</div>
-
-                        <div class="compare-cell dim">Q. 고급 학습자도 만족하는 심화 AI 학습이 가능한가요?</div>
-                        <div class="compare-cell highlight">
-                            <span class="check"></span>
-                            심화 주제 프리토킹 · 롤플레잉
-                        </div>
-                        <div class="compare-cell dim">초/중급 중심 단순 회화</div>
                     </div>
                 </div>
             </div>
@@ -649,7 +641,7 @@
                         <li><img src="img/img_company_12.png"></li>
                     </ul>
                 </div>
-                <div class="testimony-marquee-track">
+                <div class="testimony-marquee-track reverse">
                     <ul class="testimony-logos">
                         <li><img src="img/img_company_13.png"></li>
                         <li><img src="img/img_company_14.png"></li>
@@ -1071,7 +1063,7 @@
                         swipePointerId = e.pointerId;
                         try {
                             panelList.setPointerCapture(e.pointerId);
-                        } catch (err) {}
+                        } catch (err) { }
                     });
 
                     panelList.addEventListener('pointerup', function (e) {
@@ -1081,7 +1073,7 @@
                         swipePointerId = null;
                         try {
                             panelList.releasePointerCapture(e.pointerId);
-                        } catch (err) {}
+                        } catch (err) { }
                         applySwipeDelta(dx);
                     });
 
@@ -1137,38 +1129,38 @@
             ];
             var tabs = document.querySelectorAll('.solution-detail-nav .tab-list a.tab');
             if (tabs.length === sections.length) {
-            function setActiveTabByIndex(index) {
-                if (index < 0 || index >= tabs.length) return;
-                tabs.forEach(function (t, i) {
-                    var on = i === index;
-                    t.classList.toggle('active', on);
-                    if (on) {
-                        t.setAttribute('aria-current', 'page');
-                    } else {
-                        t.removeAttribute('aria-current');
-                    }
-                });
-            }
-            // 헤더·스티키 탭 높이에 맞게 rootMargin 조절 (필요 시 -40% 등으로 변경)
-            var tabObserver = new IntersectionObserver(
-                function (entries) {
-                    entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        var idx = sections.indexOf(entry.target);
-                        if (idx !== -1) {
-                            setActiveTabByIndex(idx);
+                function setActiveTabByIndex(index) {
+                    if (index < 0 || index >= tabs.length) return;
+                    tabs.forEach(function (t, i) {
+                        var on = i === index;
+                        t.classList.toggle('active', on);
+                        if (on) {
+                            t.setAttribute('aria-current', 'page');
+                        } else {
+                            t.removeAttribute('aria-current');
                         }
                     });
-                },
-                {
-                    root: null,
-                    rootMargin: '-50% 0px -50% 0px',
-                    threshold: 0
                 }
-            );
-            sections.forEach(function (sec) {
-                if (sec) tabObserver.observe(sec);
-            });
+                // 헤더·스티키 탭 높이에 맞게 rootMargin 조절 (필요 시 -40% 등으로 변경)
+                var tabObserver = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (entry) {
+                            if (!entry.isIntersecting) return;
+                            var idx = sections.indexOf(entry.target);
+                            if (idx !== -1) {
+                                setActiveTabByIndex(idx);
+                            }
+                        });
+                    },
+                    {
+                        root: null,
+                        rootMargin: '-50% 0px -50% 0px',
+                        threshold: 0
+                    }
+                );
+                sections.forEach(function (sec) {
+                    if (sec) tabObserver.observe(sec);
+                });
             }
 
             /* ── 디자인 섹션 보이면 상단 탭 바 숨김 ── */
@@ -1199,62 +1191,62 @@
             var n = buttons.length;
             if (visual && box && n > 0 && items.length === n && dots.length === n) {
 
-            var current = 0;
-            var AUTO_MS = 3000;
-            var timerId = null;
+                var current = 0;
+                var AUTO_MS = 3000;
+                var timerId = null;
 
-            function setActive(index) {
-                current = ((index % n) + n) % n;
-                buttons.forEach(function (btn, i) {
-                    btn.classList.toggle('active', i === current);
-                });
-                items.forEach(function (li, i) {
-                    li.classList.toggle('active', i === current);
-                });
-                dots.forEach(function (dot, i) {
-                    var on = i === current;
-                    dot.classList.toggle('active', on);
-                    dot.setAttribute('aria-selected', on ? 'true' : 'false');
-                });
-            }
-
-            function stopAuto() {
-                if (timerId !== null) {
-                    window.clearInterval(timerId);
-                    timerId = null;
+                function setActive(index) {
+                    current = ((index % n) + n) % n;
+                    buttons.forEach(function (btn, i) {
+                        btn.classList.toggle('active', i === current);
+                    });
+                    items.forEach(function (li, i) {
+                        li.classList.toggle('active', i === current);
+                    });
+                    dots.forEach(function (dot, i) {
+                        var on = i === current;
+                        dot.classList.toggle('active', on);
+                        dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                    });
                 }
-            }
 
-            function startAuto() {
-                stopAuto();
-                timerId = window.setInterval(function () {
-                    setActive(current + 1);
-                }, AUTO_MS);
-            }
+                function stopAuto() {
+                    if (timerId !== null) {
+                        window.clearInterval(timerId);
+                        timerId = null;
+                    }
+                }
 
-            buttons.forEach(function (btn, i) {
-                btn.addEventListener('click', function () {
-                    setActive(i);
-                    startAuto();
+                function startAuto() {
+                    stopAuto();
+                    timerId = window.setInterval(function () {
+                        setActive(current + 1);
+                    }, AUTO_MS);
+                }
+
+                buttons.forEach(function (btn, i) {
+                    btn.addEventListener('click', function () {
+                        setActive(i);
+                        startAuto();
+                    });
                 });
-            });
 
-            items.forEach(function (li, i) {
-                li.addEventListener('click', function () {
-                    setActive(i);
-                    startAuto();
+                items.forEach(function (li, i) {
+                    li.addEventListener('click', function () {
+                        setActive(i);
+                        startAuto();
+                    });
                 });
-            });
 
-            dots.forEach(function (dot, i) {
-                dot.addEventListener('click', function () {
-                    setActive(i);
-                    startAuto();
+                dots.forEach(function (dot, i) {
+                    dot.addEventListener('click', function () {
+                        setActive(i);
+                        startAuto();
+                    });
                 });
-            });
 
-            setActive(0);
-            startAuto();
+                setActive(0);
+                startAuto();
             }
 
             function setFaqItem() {
