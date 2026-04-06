@@ -41,6 +41,11 @@ select {
     font: inherit;
 }
 
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
 button {
     border: 0;
     background: transparent;

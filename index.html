@@ -409,14 +409,14 @@
                         <nav class="process-nav">
                             <ol>
                                 <li>
-                                    <button type="button" class="process-step inactive" aria-current="true"
+                                    <button type="button" class="process-step active" aria-current="true"
                                         data-step="01">
                                         <span class="process-step-num">1</span>
                                         <span class="process-step-label">파일럿 체험</span>
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="process-step active" data-step="02">
+                                    <button type="button" class="process-step" data-step="02">
                                         <span class="process-step-num">2</span>
                                         <span class="process-step-label">과정 신청</span>
                                     </button>
@@ -440,11 +440,12 @@
                                     </button>
                                 </li>
                             </ol>
-                            <p class="process-nav-note">전담 매니저가 도입부터 운영, 성과 보고까지 전 과정을 함께합니다.</p>
+                            <p class="process-nav-note"><em>전담 매니저</em>가 도입부터 운영, 성과 보고까지 전 과정을 함께합니다.</p>
                         </nav>
-                        <div class="process-panel-list">
-                            <div id="process-panel-01" class="process-panel active" role="tabpanel"
-                                aria-labelledby="process-tab-01" data-panel="01">
+                        <div class="process-panel-list" id="process-panel-list">
+                            <div class="process-panel-track">
+                            <div id="process-panel-01" class="process-panel" role="tabpanel"
+                                aria-labelledby="process-tab-01" data-panel="01" aria-hidden="false">
                                 <div class="process-panel-inner">
                                     <div class="process-panel-text">
                                         <h3 class="process-panel-heading">결정 전에 먼저 경험해 보세요</h3>
@@ -456,11 +457,11 @@
                                         </ul>
                                     </div>
                                     <div class="process-panel-visual">
-                                        <img src="img/img_process_01.png" alt="">
+                                        <div class="img"><img src="img/img_process_01.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="process-panel-02" class="process-panel" role="tabpanel" hidden data-panel="02">
+                            <div id="process-panel-02" class="process-panel" role="tabpanel" data-panel="02" aria-hidden="true">
                                 <div class="process-panel-inner">
                                     <div class="process-panel-text">
                                         <h3 class="process-panel-heading">HR 전용 시스템으로 간편하게</h3>
@@ -474,11 +475,11 @@
                                         </ul>
                                     </div>
                                     <div class="process-panel-visual">
-                                        <img src="img/img_process_02.png" alt="">
+                                        <div class="img"><img src="img/img_process_02.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="process-panel-03" class="process-panel" role="tabpanel" hidden data-panel="03">
+                            <div id="process-panel-03" class="process-panel" role="tabpanel" data-panel="03" aria-hidden="true">
                                 <div class="process-panel-inner">
                                     <div class="process-panel-text">
                                         <h3 class="process-panel-heading">정확하게 진단하고 시작합니다</h3>
@@ -492,11 +493,11 @@
                                         </ul>
                                     </div>
                                     <div class="process-panel-visual">
-                                        <img src="img/img_process_03.png" alt="">
+                                        <div class="img"><img src="img/img_process_03.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="process-panel-04" class="process-panel" role="tabpanel" hidden data-panel="04">
+                            <div id="process-panel-04" class="process-panel" role="tabpanel" data-panel="04" aria-hidden="true">
                                 <div class="process-panel-inner">
                                     <div class="process-panel-text">
                                         <h3 class="process-panel-heading">수강률을 직접 끌어올립니다</h3>
@@ -509,11 +510,11 @@
                                         </ul>
                                     </div>
                                     <div class="process-panel-visual">
-                                        <img src="img/img_process_04.png" alt="">
+                                        <div class="img"><img src="img/img_process_04.png" alt=""></div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="process-panel-05" class="process-panel" role="tabpanel" hidden data-panel="05">
+                            <div id="process-panel-05" class="process-panel" role="tabpanel" data-panel="05" aria-hidden="true">
                                 <div class="process-panel-inner">
                                     <div class="process-panel-text">
                                         <h3 class="process-panel-heading">성과를 데이터로 증명합니다</h3>
@@ -528,9 +529,10 @@
                                         </ul>
                                     </div>
                                     <div class="process-panel-visual">
-                                        <img src="img/img_process_05.png" alt="">
+                                        <div class="img"><img src="img/img_process_05.png" alt=""></div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -712,7 +714,7 @@
                                 <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-q-2" hidden>
                                     <p>기업 단체 교육(B2B)은 10명 이상부터 도입이 가능합니다. 소규모 팀부터 대기업까지 규모에 맞는 플랜을 제안드립니다.
 
-                                        <strong>📌 10명 미만이라면 B2E 임직원 제휴 플랜이 있습니다.</strong>
+                                        <em>📌 10명 미만이라면 B2E 임직원 제휴 플랜이 있습니다.</em>
                                         회사가 교육비를 부담하지 않아도, 임직원이 회사 이메일 인증만으로 제휴 할인가에 링고라를 이용할 수 있는 복지 혜택 프로그램입니다. 인원 제한
                                         없이 신청할 수 있으니 편하게 문의해 주세요.
                                     </p>
@@ -974,6 +976,130 @@
                 history.replaceState(null, '', location.pathname + location.search);
             }
 
+            /* ── 운영 프로세스: 스텝 · 가로 슬라이드 트랙 · 닷 (다른 return에 막히지 않도록 먼저 실행) ── */
+            (function initProcessSection() {
+                var processSection = document.querySelector('.process');
+                if (!processSection) return;
+
+                var panelList = processSection.querySelector('#process-panel-list, .process-panel-list');
+                var track = processSection.querySelector('.process-panel-track');
+                var stepButtons = processSection.querySelectorAll('.process-step');
+                var panels = processSection.querySelectorAll('.process-panel-track .process-panel');
+                var processDots = processSection.querySelectorAll('.process-dot-list .process-dot');
+                var count = stepButtons.length;
+                var stepPct = count > 0 ? 100 / count : 20;
+
+                function indexOfStepKey(key) {
+                    var k = String(key);
+                    for (var i = 0; i < count; i++) {
+                        if (stepButtons[i].getAttribute('data-step') === k) return i;
+                    }
+                    return 0;
+                }
+
+                function applyProcessStep(stepKey) {
+                    var selectedIndex = indexOfStepKey(stepKey);
+
+                    if (track) {
+                        track.style.transform = 'translateX(-' + selectedIndex * stepPct + '%)';
+                    }
+
+                    stepButtons.forEach(function (btn, j) {
+                        btn.classList.remove('active', 'inactive');
+                        if (j < selectedIndex) {
+                            btn.classList.add('inactive');
+                        } else if (j === selectedIndex) {
+                            btn.classList.add('active');
+                            btn.setAttribute('aria-current', 'true');
+                        } else {
+                            btn.removeAttribute('aria-current');
+                        }
+                    });
+
+                    panels.forEach(function (panel, j) {
+                        var on = j === selectedIndex;
+                        panel.setAttribute('aria-hidden', on ? 'false' : 'true');
+                    });
+
+                    processDots.forEach(function (dot, i) {
+                        var on = i === selectedIndex;
+                        dot.classList.toggle('active', on);
+                        dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                    });
+                }
+
+                stepButtons.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var s = btn.getAttribute('data-step');
+                        if (s) applyProcessStep(s);
+                    });
+                });
+
+                processDots.forEach(function (dot, i) {
+                    dot.addEventListener('click', function () {
+                        var b = stepButtons[i];
+                        if (!b) return;
+                        var s = b.getAttribute('data-step');
+                        if (s) applyProcessStep(s);
+                    });
+                });
+
+                var swipeStartX = null;
+                var swipePointerId = null;
+
+                function getActiveStepIndex() {
+                    for (var i = 0; i < count; i++) {
+                        if (stepButtons[i].classList.contains('active')) return i;
+                    }
+                    return 0;
+                }
+
+                function applySwipeDelta(dx) {
+                    if (Math.abs(dx) < 48) return;
+                    var cur = getActiveStepIndex();
+                    if (dx < 0 && cur < count - 1) {
+                        applyProcessStep(stepButtons[cur + 1].getAttribute('data-step'));
+                    } else if (dx > 0 && cur > 0) {
+                        applyProcessStep(stepButtons[cur - 1].getAttribute('data-step'));
+                    }
+                }
+
+                if (panelList) {
+                    panelList.addEventListener('pointerdown', function (e) {
+                        if (e.pointerType === 'mouse' && e.button !== 0) return;
+                        swipeStartX = e.clientX;
+                        swipePointerId = e.pointerId;
+                        try {
+                            panelList.setPointerCapture(e.pointerId);
+                        } catch (err) {}
+                    });
+
+                    panelList.addEventListener('pointerup', function (e) {
+                        if (swipePointerId !== e.pointerId || swipeStartX === null) return;
+                        var dx = e.clientX - swipeStartX;
+                        swipeStartX = null;
+                        swipePointerId = null;
+                        try {
+                            panelList.releasePointerCapture(e.pointerId);
+                        } catch (err) {}
+                        applySwipeDelta(dx);
+                    });
+
+                    panelList.addEventListener('pointercancel', function () {
+                        swipeStartX = null;
+                        swipePointerId = null;
+                    });
+                }
+
+                var initial = '01';
+                panels.forEach(function (p) {
+                    if (p.getAttribute('aria-hidden') === 'false') {
+                        initial = p.getAttribute('data-panel') || initial;
+                    }
+                });
+                applyProcessStep(initial);
+            })();
+
             /* ── solution-detail 탭: 활성 + 스무스 스크롤 ── */
             var tabs = document.querySelectorAll('.solution-detail-nav .tab-list a.tab');
             tabs.forEach(function (tab) {
@@ -1010,7 +1136,7 @@
                 document.querySelector('.solution-detail-section.ai')
             ];
             var tabs = document.querySelectorAll('.solution-detail-nav .tab-list a.tab');
-            if (tabs.length !== sections.length) return;
+            if (tabs.length === sections.length) {
             function setActiveTabByIndex(index) {
                 if (index < 0 || index >= tabs.length) return;
                 tabs.forEach(function (t, i) {
@@ -1043,6 +1169,7 @@
             sections.forEach(function (sec) {
                 if (sec) tabObserver.observe(sec);
             });
+            }
 
             /* ── 디자인 섹션 보이면 상단 탭 바 숨김 ── */
             var nav = document.querySelector('.solution-detail-nav');
@@ -1067,12 +1194,10 @@
             var visual = document.querySelector('.design-box-visual');
             var box = document.querySelector('.design-box-item ul');
             var dots = document.querySelectorAll('.design-box-dot-list .design-box-dot');
-            if (!visual || !box) return;
-
-            var buttons = visual.querySelectorAll('button');
-            var items = box.querySelectorAll('li');
+            var buttons = visual ? visual.querySelectorAll('button') : [];
+            var items = box ? box.querySelectorAll('li') : [];
             var n = buttons.length;
-            if (n === 0 || items.length !== n || dots.length !== n) return;
+            if (visual && box && n > 0 && items.length === n && dots.length === n) {
 
             var current = 0;
             var AUTO_MS = 3000;
@@ -1130,82 +1255,7 @@
 
             setActive(0);
             startAuto();
-
-            /* ── 운영 프로세스: 스텝 + 패널 + 프로세스 전용 닷 ── */
-            function initProcessSection() {
-                var processSection = document.querySelector('.process');
-                if (!processSection) return;
-
-                var stepButtons = processSection.querySelectorAll('.process-step');
-                var panels = processSection.querySelectorAll('.process-panel-list .process-panel');
-                var processDots = processSection.querySelectorAll('.process-dot-list .process-dot');
-
-                function indexOfStepKey(key) {
-                    var k = String(key);
-                    for (var i = 0; i < stepButtons.length; i++) {
-                        if (stepButtons[i].getAttribute('data-step') === k) return i;
-                    }
-                    return 0;
-                }
-
-                function applyProcessStep(stepKey) {
-                    var selectedIndex = indexOfStepKey(stepKey);
-
-                    stepButtons.forEach(function (btn, j) {
-                        btn.classList.remove('active', 'inactive');
-                        if (j < selectedIndex) {
-                            btn.classList.add('inactive');
-                        } else if (j === selectedIndex) {
-                            btn.classList.add('active');
-                            btn.setAttribute('aria-current', 'true');
-                        } else {
-                            btn.removeAttribute('aria-current');
-                        }
-                    });
-
-                    panels.forEach(function (panel) {
-                        var on = panel.getAttribute('data-panel') === String(stepKey);
-                        panel.classList.toggle('active', on);
-                        if (on) {
-                            panel.removeAttribute('hidden');
-                        } else {
-                            panel.setAttribute('hidden', '');
-                        }
-                    });
-
-                    processDots.forEach(function (dot, i) {
-                        var on = i === selectedIndex;
-                        dot.classList.toggle('active', on);
-                        dot.setAttribute('aria-selected', on ? 'true' : 'false');
-                    });
-                }
-
-                stepButtons.forEach(function (btn) {
-                    btn.addEventListener('click', function () {
-                        var s = btn.getAttribute('data-step');
-                        if (!s) return;
-                        applyProcessStep(s);
-                    });
-                });
-
-                processDots.forEach(function (dot, i) {
-                    dot.addEventListener('click', function () {
-                        var b = stepButtons[i];
-                        if (!b) return;
-                        var s = b.getAttribute('data-step');
-                        if (s) applyProcessStep(s);
-                    });
-                });
-
-                var initial = '01';
-                panels.forEach(function (p) {
-                    if (p.classList.contains('active')) {
-                        initial = p.getAttribute('data-panel') || initial;
-                    }
-                });
-                applyProcessStep(initial);
             }
-            initProcessSection();
 
             function setFaqItem() {
                 var root = document.querySelector('.faq');
