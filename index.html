@@ -396,7 +396,8 @@
                 </div>
                 <p class="design-subcopy">원어민 1:1 회화 · 출강 · AI 학습을 결합해<br>기업의 교육 목적과 구성원 수준에 맞는 최적의 교육 플랜을 제안합니다.</p>
                 <div class="design-cta">
-                    <button type="button" class="btn gradient" onclick="scrollToSection('inquiry')">우리 회사에 맞는 교육 플랜 제안받기</button>
+                    <button type="button" class="btn gradient" onclick="scrollToSection('inquiry')">우리 회사에 맞는 교육 플랜
+                        제안받기</button>
                 </div>
             </div>
         </section>
@@ -408,14 +409,14 @@
                         <nav class="process-nav">
                             <ol>
                                 <li>
-                                    <button type="button" class="process-step active" aria-current="true"
+                                    <button type="button" class="process-step inactive" aria-current="true"
                                         data-step="01">
                                         <span class="process-step-num">1</span>
                                         <span class="process-step-label">파일럿 체험</span>
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="process-step" data-step="02">
+                                    <button type="button" class="process-step active" data-step="02">
                                         <span class="process-step-num">2</span>
                                         <span class="process-step-label">과정 신청</span>
                                     </button>
@@ -532,6 +533,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="process-dot-list" role="tablist">
+                        <button type="button" class="process-dot active" aria-selected="true"></button>
+                        <button type="button" class="process-dot" aria-selected="false"></button>
+                        <button type="button" class="process-dot" aria-selected="false"></button>
+                        <button type="button" class="process-dot" aria-selected="false"></button>
+                        <button type="button" class="process-dot" aria-selected="false"></button>
                     </div>
                 </div>
             </div>
@@ -1123,21 +1131,32 @@
             setActive(0);
             startAuto();
 
-            /* ── 운영 프로세스: 스텝 클릭 시 패널 전환 ── */
-            function setProcessStep() {
+            /* ── 운영 프로세스: 스텝 + 패널 + 프로세스 전용 닷 ── */
+            function initProcessSection() {
                 var processSection = document.querySelector('.process');
                 if (!processSection) return;
 
                 var stepButtons = processSection.querySelectorAll('.process-step');
                 var panels = processSection.querySelectorAll('.process-panel-list .process-panel');
+                var processDots = processSection.querySelectorAll('.process-dot-list .process-dot');
 
-                function setProcessStep(step) {
-                    var key = String(step);
+                function indexOfStepKey(key) {
+                    var k = String(key);
+                    for (var i = 0; i < stepButtons.length; i++) {
+                        if (stepButtons[i].getAttribute('data-step') === k) return i;
+                    }
+                    return 0;
+                }
 
-                    stepButtons.forEach(function (btn) {
-                        var on = btn.getAttribute('data-step') === key;
-                        btn.classList.toggle('active', on);
-                        if (on) {
+                function applyProcessStep(stepKey) {
+                    var selectedIndex = indexOfStepKey(stepKey);
+
+                    stepButtons.forEach(function (btn, j) {
+                        btn.classList.remove('active', 'inactive');
+                        if (j < selectedIndex) {
+                            btn.classList.add('inactive');
+                        } else if (j === selectedIndex) {
+                            btn.classList.add('active');
                             btn.setAttribute('aria-current', 'true');
                         } else {
                             btn.removeAttribute('aria-current');
@@ -1145,7 +1164,7 @@
                     });
 
                     panels.forEach(function (panel) {
-                        var on = panel.getAttribute('data-panel') === key;
+                        var on = panel.getAttribute('data-panel') === String(stepKey);
                         panel.classList.toggle('active', on);
                         if (on) {
                             panel.removeAttribute('hidden');
@@ -1153,17 +1172,40 @@
                             panel.setAttribute('hidden', '');
                         }
                     });
+
+                    processDots.forEach(function (dot, i) {
+                        var on = i === selectedIndex;
+                        dot.classList.toggle('active', on);
+                        dot.setAttribute('aria-selected', on ? 'true' : 'false');
+                    });
                 }
 
                 stepButtons.forEach(function (btn) {
                     btn.addEventListener('click', function () {
                         var s = btn.getAttribute('data-step');
                         if (!s) return;
-                        setProcessStep(s);
+                        applyProcessStep(s);
                     });
                 });
+
+                processDots.forEach(function (dot, i) {
+                    dot.addEventListener('click', function () {
+                        var b = stepButtons[i];
+                        if (!b) return;
+                        var s = b.getAttribute('data-step');
+                        if (s) applyProcessStep(s);
+                    });
+                });
+
+                var initial = '01';
+                panels.forEach(function (p) {
+                    if (p.classList.contains('active')) {
+                        initial = p.getAttribute('data-panel') || initial;
+                    }
+                });
+                applyProcessStep(initial);
             }
-            setProcessStep();
+            initProcessSection();
 
             function setFaqItem() {
                 var root = document.querySelector('.faq');
