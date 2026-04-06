@@ -2038,6 +2038,8 @@ $title-fs: 48;
 }
 
 .faq {
+    @extend .layout;
+
     .inner {
         padding: $section-padding-top-bottom 0;
     }
@@ -2204,6 +2206,7 @@ $title-fs: 48;
 }
 
 .inquiry {
+    @extend .layout;
     padding: $section-padding-top-bottom 0;
     background: linear-gradient(168deg,
             color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%,
@@ -2324,6 +2327,7 @@ $title-fs: 48;
 }
 
 .pilot {
+    @extend .layout;
     padding: $section-padding-top-bottom 0;
     background: var(--primary-500);
 
@@ -2406,7 +2410,8 @@ $title-fs: 48;
 
 /* Footer */
 .footer {
-    padding-bottom: $section-padding-top-bottom;
+    @extend .layout;
+    padding-bottom: 160px;
     background: var(--opacity-white);
     color: var(--gray-800);
 
@@ -2665,8 +2670,16 @@ $title-fs: 48;
         gap: var(--spacing-s);
         z-index: 100;
 
-        .btn {
+        &-main {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 480px;
         }
 
         .goto-top {

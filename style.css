@@ -551,7 +551,7 @@ p,
   width: 100%;
 }
 
-.layout, .testimony, .compare, .appeal, .process, .design, .solution-detail-section, .solution, .metric, .hero, .header, .announcement-bar {
+.layout, .footer, .pilot, .inquiry, .faq, .testimony, .compare, .appeal, .process, .design, .solution-detail-section, .solution, .metric, .hero, .header, .announcement-bar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2519,7 +2519,7 @@ p,
 
 /* Footer */
 .footer {
-  padding-bottom: 88px;
+  padding-bottom: 160px;
   background: var(--opacity-white);
   color: var(--gray-800);
 }
@@ -2764,8 +2764,15 @@ p,
   gap: var(--spacing-s);
   z-index: 100;
 }
-.footer .fab .btn {
+.footer .fab-main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .fab .btn {
+  width: 100%;
+  max-width: 480px;
 }
 .footer .fab .goto-top {
   flex: none;
