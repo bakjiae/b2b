@@ -44,7 +44,7 @@ $title-fs: 48;
     }
 }
 
-.title {
+.title-01 {
     font-size: calc($title-fs/16*1em);
     line-height: 125%;
     text-align: center;
@@ -55,6 +55,20 @@ $title-fs: 48;
 
     @media (max-width: $breakpoint-03) {
         font-size: calc($title-fs/25*1em);
+    }
+}
+
+.title-02 {
+    font-size: calc($title-fs/16*0.833333em);
+    line-height: 125%;
+    text-align: left;
+
+    @media (max-width: $breakpoint-02) {
+        font-size: calc($title-fs/20*0.833333em);
+    }
+
+    @media (max-width: $breakpoint-03) {
+        font-size: calc($title-fs/25*0.833333em);
     }
 }
 
@@ -215,7 +229,7 @@ $title-fs: 48;
         }
 
         h1 {
-            @extend .title;
+            font-size: 1em;
         }
 
         em {
@@ -580,7 +594,7 @@ $title-fs: 48;
         background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.20)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.20)) 96.73%), var(--Opacity-Black, #121214);
 
         h2 {
-            @extend .title;
+            font-size: 1em;
             color: var(--opacity-white);
         }
 
@@ -1000,7 +1014,7 @@ $title-fs: 48;
     @extend .layout;
 
     h2 {
-        @extend .title;
+        @extend .title-01;
         text-align: center;
         margin-bottom: var(--spacing-m);
     }
@@ -1213,7 +1227,7 @@ $title-fs: 48;
     }
 
     h2 {
-        @extend .title;
+        @extend .title-01;
         text-align: center;
     }
 
@@ -1437,7 +1451,7 @@ $title-fs: 48;
             top: 0;
             flex: 0 0 auto;
             width: 45%;
-            min-width: 400px;
+            min-width: 320px;
             max-width: 420px;
             height: 100%;
 
@@ -1496,7 +1510,6 @@ $title-fs: 48;
             max-width: 100%;
             padding: var(--spacing-xxs) var(--spacing-s);
             border-radius: var(--radius-xl);
-            border: 1px solid var(--opacity-black100);
             background: linear-gradient(90deg, var(--Primary-300, #E9DFFF) 0%, var(--Success-300, #D4F7F2) 100%);
         }
 
@@ -1579,10 +1592,8 @@ $title-fs: 48;
             text-align: left;
 
             .title {
+                @extend .title-02;
                 margin-bottom: var(--spacing-l);
-                font-size: 40px;
-                line-height: 125%;
-                font-weight: 700;
             }
         }
 
@@ -1701,9 +1712,7 @@ $title-fs: 48;
     }
 
     .title {
-        font-size: 40px;
-        font-weight: 700;
-        text-align: left;
+        @extend .title-02;
         margin-bottom: var(--spacing-l);
     }
 
@@ -1726,6 +1735,10 @@ $title-fs: 48;
     &-board {
         @include h2sb;
         display: flex;
+
+        @media (max-width: $breakpoint-02) {
+            @include h3;
+        }
     }
 
     &-column {
@@ -1733,7 +1746,7 @@ $title-fs: 48;
         display: flex;
         flex-direction: column;
         padding: var(--spacing-s) 0;
-        
+
         &.question {
             .compare-cell {
                 justify-content: flex-start;
@@ -1805,10 +1818,12 @@ $title-fs: 48;
     }
 }
 
-// testimony: 로고 마퀴 (높이 44px, 간격 64px)
 .testimony {
     &-marquee {
+        margin-top: $section-padding-top-bottom;
         overflow: hidden;
+        border-top: 1px solid var(--opacity-black100);
+        border-bottom: 1px solid var(--opacity-black100);
         background: var(--opacity-white);
     }
 
@@ -1851,17 +1866,14 @@ $title-fs: 48;
     }
 
     &-title {
-        margin: 0 0 var(--spacing-xl);
+        @extend .title-02;
+        margin: 0 0 $section-padding-top-bottom;
         text-align: center;
-        color: var(--gray-500);
-        font-size: 20px;
-        font-weight: 600;
     }
 
     &-row {
         display: flex;
         align-items: flex-start;
-        gap: var(--spacing-xl);
         min-width: 0;
     }
 
@@ -1882,14 +1894,35 @@ $title-fs: 48;
         border-radius: var(--radius-xxl);
         min-height: 100%;
 
+        em {
+            font-weight: 700;
+        }
+
         &.ice {
-            background: #eef2ff;
+            background: #F4F7FF;
             color: var(--opacity-black);
+
+            em {
+                color: var(--infomation-600);
+            }
+
+            .quote {
+                background-image: url("img/img_quote_ice.svg");
+            }
         }
 
         &.cream {
-            background: #fff4c3;
+            background: var(--warning-100);
             color: var(--opacity-black);
+
+            em {
+                color: var(--warning-700);
+            }
+
+            .quote {
+                background-image: url("img/img_quote_cream.svg");
+
+            }
         }
 
         .quote {
@@ -1897,49 +1930,40 @@ $title-fs: 48;
             width: 32px;
             height: 24px;
             margin-bottom: var(--spacing-m);
-            opacity: 0.5;
-
-            .ice & {
-                background: var(--infomation-300);
-                mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext x='0' y='20' font-size='24' fill='black'%3E%22%3C/text%3E%3C/svg%3E") center / contain no-repeat;
-            }
-
-            .cream & {
-                background: var(--warning-300);
-                mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext x='0' y='20' font-size='24' fill='black'%3E%22%3C/text%3E%3C/svg%3E") center / contain no-repeat;
-            }
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .desc {
-            @include body1;
             margin: 0 0 var(--spacing-m);
             color: var(--opacity-black600);
         }
 
         .headline {
-            @include h3;
+            @include h1;
             margin: 0 0 var(--spacing-s);
-            font-weight: 700;
         }
 
         .foot {
-            @include caption1;
+            @include h4;
             margin: 0;
-            color: var(--gray-600);
+            color: var(--opacity-black300);
         }
     }
 
     &-more {
         flex: none;
         align-self: center;
+        padding: var(--spacing-s) var(--spacing-m);
         white-space: nowrap;
-        color: var(--success-600);
         font-weight: 700;
+        text-align: left;
         text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
+        background: linear-gradient(97deg, var(--Primary-500, #662DDF) 0.42%, var(--Success-600, #06BF9D) 99.58%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     @media (max-width: $breakpoint-02) {
@@ -1973,7 +1997,7 @@ $title-fs: 48;
     &-layout {
         display: flex;
         align-items: flex-start;
-        gap: var(--spacing-xxl);
+        gap: $section-padding-left-right;
         min-width: 0;
     }
 
@@ -1988,10 +2012,8 @@ $title-fs: 48;
     }
 
     &-title {
+        @extend .title-02;
         margin: 0 0 var(--spacing-l);
-        text-align: left;
-        color: var(--gray-500);
-        @include h2sb;
     }
 
     &-list {
@@ -2005,12 +2027,8 @@ $title-fs: 48;
 
         &.is-open {
             .faq-toggle::before {
-                content: "×";
+                transform: rotate(45deg);
             }
-        }
-
-        &:not(.is-open) .faq-toggle::before {
-            content: "+";
         }
     }
 
@@ -2029,6 +2047,7 @@ $title-fs: 48;
     }
 
     &-q-text {
+        @include h2;
         flex: 1;
         min-width: 0;
     }
@@ -2036,19 +2055,34 @@ $title-fs: 48;
     &-toggle {
         flex: none;
         width: 1.5em;
+        padding: 0.5em;
         text-align: center;
         color: var(--opacity-white600);
-        font-size: 1.25rem;
-        line-height: 1;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("img/ic_plus_line.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     &-panel {
         padding: 0 0 var(--spacing-m);
-        color: var(--gray-500);
-        @include body2;
+        @include body1;
+        color: var(--opacity-black600);
 
         p {
             margin: 0;
+        }
+
+        em {
+            font-weight: 700;
+            color: var(--opacity-black);
         }
 
         &[hidden] {
