@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <title>링고라 튜터링 - 기업 외국어 교육 올인원 솔루션</title>
 </head>
@@ -31,15 +33,14 @@
                 <button class="btn" onclick="scrollToSection('inquiry')">도입 문의하기</button>
             </div>
 
-            <button type="button" class="header-menu-toggle" id="header-menu-toggle" aria-expanded="false"
-                aria-controls="header-menu-panel" onclick="toggleHeaderMenu(event)">
-                <span class="header-menu-toggle-bars" aria-hidden="true">
+            <button type="button" class="header-menu-toggle" id="header-menu-toggle" onclick="toggleHeaderMenu(event)">
+                <span class="header-menu-toggle-bars">
                     <span class="header-menu-toggle-bar"></span>
                     <span class="header-menu-toggle-bar"></span>
                     <span class="header-menu-toggle-bar"></span>
                 </span>
             </button>
-            <div class="header-menu" id="header-menu-panel" role="navigation">
+            <div class="header-menu" id="header-menu-panel">
                 <ul>
                     <li><button class="btn ghost" onclick="scrollToSection('solution')">서비스 소개</button></li>
                     <li><button class="btn ghost" onclick="scrollToSection('process')">운영 프로세스</button></li>
@@ -412,10 +413,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="design-box-dot-list" role="tablist">
-                        <button type="button" class="design-box-dot active" aria-selected="true"></button>
-                        <button type="button" class="design-box-dot" aria-selected="false"></button>
-                        <button type="button" class="design-box-dot" aria-selected="false"></button>
+                    <div class="design-box-dot-list">
+                        <button type="button" class="design-box-dot active"></button>
+                        <button type="button" class="design-box-dot"></button>
+                        <button type="button" class="design-box-dot"></button>
                     </div>
                 </div>
                 <p class="design-subcopy">원어민 1:1 회화 · 출강 · AI 학습을 결합해<br>기업의 교육 목적과 구성원 수준에 맞는 최적의 교육 플랜을 제안합니다.</p>
@@ -434,8 +435,7 @@
                         <nav class="process-nav">
                             <ol>
                                 <li>
-                                    <button type="button" class="process-step active" aria-current="true"
-                                        data-step="01">
+                                    <button type="button" class="process-step active" data-step="01">
                                         <span class="process-step-num">1</span>
                                         <span class="process-step-label">파일럿 체험</span>
                                     </button>
@@ -469,8 +469,7 @@
                         </nav>
                         <div class="process-panel-list" id="process-panel-list">
                             <div class="process-panel-track">
-                                <div id="process-panel-01" class="process-panel" role="tabpanel"
-                                    aria-labelledby="process-tab-01" data-panel="01" aria-hidden="false">
+                                <div id="process-panel-01" class="process-panel" data-panel="01">
                                     <div class="process-panel-inner">
                                         <div class="process-panel-text">
                                             <h3 class="process-panel-heading">결정 전에 먼저 경험해 보세요</h3>
@@ -486,8 +485,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="process-panel-02" class="process-panel" role="tabpanel" data-panel="02"
-                                    aria-hidden="true">
+                                <div id="process-panel-02" class="process-panel" data-panel="02">
                                     <div class="process-panel-inner">
                                         <div class="process-panel-text">
                                             <h3 class="process-panel-heading">HR 전용 시스템으로 간편하게</h3>
@@ -505,8 +503,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="process-panel-03" class="process-panel" role="tabpanel" data-panel="03"
-                                    aria-hidden="true">
+                                <div id="process-panel-03" class="process-panel" data-panel="03">
                                     <div class="process-panel-inner">
                                         <div class="process-panel-text">
                                             <h3 class="process-panel-heading">정확하게 진단하고 시작합니다</h3>
@@ -524,8 +521,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="process-panel-04" class="process-panel" role="tabpanel" data-panel="04"
-                                    aria-hidden="true">
+                                <div id="process-panel-04" class="process-panel" data-panel="04">
                                     <div class="process-panel-inner">
                                         <div class="process-panel-text">
                                             <h3 class="process-panel-heading">수강률을 직접 끌어올립니다</h3>
@@ -542,8 +538,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="process-panel-05" class="process-panel" role="tabpanel" data-panel="05"
-                                    aria-hidden="true">
+                                <div id="process-panel-05" class="process-panel" data-panel="05">
                                     <div class="process-panel-inner">
                                         <div class="process-panel-text">
                                             <h3 class="process-panel-heading">성과를 데이터로 증명합니다</h3>
@@ -565,12 +560,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="process-dot-list" role="tablist">
-                        <button type="button" class="process-dot active" aria-selected="true"></button>
-                        <button type="button" class="process-dot" aria-selected="false"></button>
-                        <button type="button" class="process-dot" aria-selected="false"></button>
-                        <button type="button" class="process-dot" aria-selected="false"></button>
-                        <button type="button" class="process-dot" aria-selected="false"></button>
+                    <div class="process-dot-list">
+                        <button type="button" class="process-dot active"></button>
+                        <button type="button" class="process-dot"></button>
+                        <button type="button" class="process-dot"></button>
+                        <button type="button" class="process-dot"></button>
+                        <button type="button" class="process-dot"></button>
                     </div>
                 </div>
             </div>
@@ -737,23 +732,21 @@
                         <h2 class="faq-title">자주 묻는 질문</h2>
                         <ul class="faq-list">
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-1" aria-expanded="false"
-                                    aria-controls="faq-panel-1">
+                                <button type="button" class="faq-q" id="faq-q-1">
                                     <span class="faq-q-text">현재 다른 어학 서비스를 쓰고 있는데, 전환이 가능한가요?</span>
-                                    <span class="faq-toggle" aria-hidden="false"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-q-1" hidden>
+                                <div class="faq-panel" id="faq-panel-1" hidden>
                                     <p>네, 가능합니다. 기존 서비스 계약 종료 시점에 맞게 도입을 도와드립니다. 도입 방법이나 일정은 상담을 통해 상세히 안내해 드릴 수 있으니 부담
                                         없이 문의해 주세요.</p>
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-2" aria-expanded="false"
-                                    aria-controls="faq-panel-2">
+                                <button type="button" class="faq-q" id="faq-q-2">
                                     <span class="faq-q-text">최소 몇 명부터 도입할 수 있나요?</span>
-                                    <span class="faq-toggle" aria-hidden="true"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-q-2" hidden>
+                                <div class="faq-panel" id="faq-panel-2" hidden>
                                     <p>기업 단체 교육(B2B)은 10명 이상부터 도입이 가능합니다. 소규모 팀부터 대기업까지 규모에 맞는 플랜을 제안드립니다.<br><br>
                                         <em>📌 10명 미만이라면 B2E 임직원 제휴 플랜이 있습니다.</em><br>
                                         회사가 교육비를 부담하지 않아도, 임직원이 회사 이메일 인증만으로 제휴 할인가에 링고라를 이용할 수 있는 복지 혜택 프로그램입니다. 인원 제한
@@ -762,45 +755,41 @@
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-3" aria-expanded="false"
-                                    aria-controls="faq-panel-3">
+                                <button type="button" class="faq-q" id="faq-q-3">
                                     <span class="faq-q-text">수강 현황을 HR 담당자가 직접 확인할 수 있나요?</span>
-                                    <span class="faq-toggle" aria-hidden="true"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-q-3" hidden>
+                                <div class="faq-panel" id="faq-panel-3" hidden>
                                     <p>HR 전용 어드민 대시보드에서 실시간으로 확인 가능합니다. 전체 현황뿐 아니라 부서별 · 개인별 상세 조회도 가능하며, 월별 자동 리포트도
                                         제공됩니다.</p>
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-4" aria-expanded="false"
-                                    aria-controls="faq-panel-4">
+                                <button type="button" class="faq-q" id="faq-q-4">
                                     <span class="faq-q-text">계약 기간은 어떻게 되나요?</span>
-                                    <span class="faq-toggle" aria-hidden="true"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-q-4" hidden>
+                                <div class="faq-panel" id="faq-panel-4" hidden>
                                     <p>기본 계약 단위는 1년입니다. 파일럿 체험 이후 도입 방향이 맞는다고 판단되면 바로 계약으로 진행할 수 있으며, 규모와 교육 목적에 맞는 플랜을
                                         함께 설계해 드립니다.</p>
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-5" aria-expanded="false"
-                                    aria-controls="faq-panel-5">
+                                <button type="button" class="faq-q" id="faq-q-5">
                                     <span class="faq-q-text">도입까지 얼마나 걸리나요?</span>
-                                    <span class="faq-toggle" aria-hidden="true"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-q-5" hidden>
+                                <div class="faq-panel" id="faq-panel-5" hidden>
                                     <p>계약 완료 후 빠르면 1주일 이내에 수강을 시작할 수 있습니다. 출강 일정 조율이나 맞춤 커리큘럼 설계가 필요한 경우 최대 2~3주 소요될 수
                                         있습니다.</p>
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button type="button" class="faq-q" id="faq-q-6" aria-expanded="false"
-                                    aria-controls="faq-panel-6">
+                                <button type="button" class="faq-q" id="faq-q-6">
                                     <span class="faq-q-text">오프라인 출강은 어떻게 운영되나요?</span>
-                                    <span class="faq-toggle" aria-hidden="true"></span>
+                                    <span class="faq-toggle"></span>
                                 </button>
-                                <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-q-6" hidden>
+                                <div class="faq-panel" id="faq-panel-6" hidden>
                                     <p>기업에 맞는 강사를 매칭해 직접 방문 수업으로 운영됩니다. 도입 전 커리큘럼 미팅을 통해 업종 · 직무에 맞는 교재를 100% 맞춤 설계합니다.
                                         한국어· 영어 · 중국어 · 일본어 등 다국어, 스페인어 · 베트남어 등 기타 언어도 가능합니다.</p>
                                 </div>
@@ -863,7 +852,7 @@
                         </div>
                         <div class="inquiry-field inquiry-full">
                             <p class="f-lbl" id="inq-edu-label">교육 도입 현황 <span class="req">*</span></p>
-                            <div class="f-opts" role="group" aria-labelledby="inq-edu-label">
+                            <div class="f-opts">
                                 <label><input type="radio" name="edu_status" value="new" required /> 신규 교육 도입 검토</label>
                                 <label><input type="radio" name="edu_status" value="replace" /> 기존 업체 교체 검토</label>
                                 <label><input type="radio" name="edu_status" value="expand" /> 기존 교육 확장/운영</label>
@@ -894,7 +883,7 @@
                         </div>
                         <div class="inquiry-field inquiry-full">
                             <p class="f-lbl" id="inq-svc-label">관심 서비스 <span class="req opt">(복수 선택 가능)</span></p>
-                            <div class="f-opts" role="group" aria-labelledby="inq-svc-label">
+                            <div class="f-opts">
                                 <label><input type="checkbox" name="interest" value="phone" /> 1:1 전화/화상수업</label>
                                 <label><input type="checkbox" name="interest" value="offline" /> 오프라인 출강</label>
                                 <label><input type="checkbox" name="interest" value="ai" /> AI 학습</label>
@@ -940,7 +929,7 @@
     <footer class="footer">
         <div class="inner">
             <div class="footer-top">
-                <nav class="footer-nav" aria-label="푸터 링크">
+                <nav class="footer-nav">
                     <a href="">FAQ</a>
                     <a href="">도입 문의</a>
                     <a href="">채용</a>
@@ -1001,7 +990,7 @@
                 </div>
             </div>
 
-            <p class="footer-copy">© 2024 Lingora Tutoring. All rights reserved.</p>
+            <p class="footer-copy">© 2026 Lingora Tutoring. All rights reserved.</p>
 
             <div class="fab">
                 <div class="fab-main"><button class="btn gradient" onclick="scrollToSection('inquiry')">10초만에 기업교육
@@ -1392,6 +1381,47 @@
                 });
             }
             setFaqItem();
+
+            (function initFabScrollBehavior() {
+                var fab = document.querySelector('.fab .btn');
+                if (!fab) return;
+
+                var lastY = window.scrollY;
+                var ticking = false;
+
+                function update() {
+                    ticking = false;
+
+                    var y = window.scrollY;
+
+                    // y=0이면 무조건 숨김
+                    if (y <= 0) {
+                        fab.classList.add('is-hidden');
+                        lastY = y;
+                        return;
+                    }
+
+                    // 아래로 스크롤(=y 증가) -> 보이기 / 위로 스크롤(=y 감소) -> 숨기기
+                    if (y > lastY + 2) {
+                        fab.classList.remove('is-hidden');
+                    } else if (y < lastY - 2) {
+                        fab.classList.add('is-hidden');
+                    }
+
+                    lastY = y;
+                }
+
+                // 초기 상태
+                fab.classList.add('is-hidden');
+                update();
+
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        ticking = true;
+                        requestAnimationFrame(update);
+                    }
+                }, { passive: true });
+            })();
         });
     </script>
 </body>

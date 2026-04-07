@@ -761,6 +761,8 @@ $main-btn-max-width: 320px;
         h2 {
             font-size: 1em;
             color: var(--opacity-white);
+            text-align: center;
+            line-height: 125%;
         }
 
         img {
@@ -815,7 +817,7 @@ $main-btn-max-width: 320px;
             }
         }
     }
-    
+
     @media (max-width: $breakpoint-03) {
         &-box {
             border-radius: var(--radius-xxxl);
@@ -1173,6 +1175,7 @@ $main-btn-max-width: 320px;
         @media (max-width: $breakpoint-02) {
             &-label {
                 @include h4;
+                text-align: center;
             }
         }
 
@@ -2374,10 +2377,10 @@ $main-btn-max-width: 320px;
 .inquiry {
     @extend .layout;
     background: linear-gradient(168deg,
-    color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%,
-    #1c2128 45%,
-    color-mix(in srgb, #1a2228 85%, var(--infomation-800) 15%) 100%);
-    
+            color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%,
+            #1c2128 45%,
+            color-mix(in srgb, #1a2228 85%, var(--infomation-800) 15%) 100%);
+
     .inner {
         padding: $section-padding-top-bottom 0;
 
@@ -2788,7 +2791,7 @@ $main-btn-max-width: 320px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: var(--spacing-s);
+        gap: var(--spacing-xxs) var(--spacing-s);
     }
 
     &-badge-as,
@@ -2822,7 +2825,7 @@ $main-btn-max-width: 320px;
 
     @media (max-width: $breakpoint-02) {
         &-social {
-            gap: var(--spacing-m);
+            gap: var(--spacing-s);
         }
 
         &-cta-img {
@@ -2859,6 +2862,13 @@ $main-btn-max-width: 320px;
             width: 100%;
             max-width: 480px;
             height: var(--height-xl);
+            transition: opacity .2s ease, transform .2s ease;
+
+            &.is-hidden {
+                opacity: 0;
+                transform: translateY(var(--spacing-m));
+                pointer-events: none;
+            }
         }
 
         .goto-top {

@@ -1101,6 +1101,8 @@ p,
 .solution-box h2 {
   font-size: 1em;
   color: var(--opacity-white);
+  text-align: center;
+  line-height: 125%;
 }
 .solution-box img {
   width: 100%;
@@ -1426,6 +1428,7 @@ p,
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
+    text-align: center;
   }
 }
 @media (max-width: 440px) {
@@ -2844,7 +2847,7 @@ p,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-s);
+  gap: var(--spacing-xxs) var(--spacing-s);
 }
 .footer-badge-as, .footer-badge-gp {
   display: inline-flex;
@@ -2875,7 +2878,7 @@ p,
 }
 @media (max-width: 768px) {
   .footer-social {
-    gap: var(--spacing-m);
+    gap: var(--spacing-s);
   }
   .footer-cta-img {
     position: relative;
@@ -2911,6 +2914,12 @@ p,
   width: 100%;
   max-width: 480px;
   height: var(--height-xl);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.footer .fab .btn.is-hidden {
+  opacity: 0;
+  transform: translateY(var(--spacing-m));
+  pointer-events: none;
 }
 .footer .fab .goto-top {
   flex: none;
