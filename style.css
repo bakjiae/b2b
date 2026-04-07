@@ -2900,6 +2900,7 @@ p,
   padding: var(--spacing-m) var(--spacing-l);
   gap: var(--spacing-s);
   z-index: 100;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .footer .fab-main {
   flex: 1;
@@ -2914,12 +2915,6 @@ p,
   width: 100%;
   max-width: 480px;
   height: var(--height-xl);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.footer .fab .btn.is-hidden {
-  opacity: 0;
-  transform: translateY(var(--spacing-m));
-  pointer-events: none;
 }
 .footer .fab .goto-top {
   flex: none;
@@ -2931,4 +2926,9 @@ p,
   background: var(--opacity-white);
   border-radius: var(--radius-round);
   border: var(--strokewidths-thin) solid var(--opacity-black100);
+}
+.footer .fab.is-hidden {
+  opacity: 0;
+  transform: translateY(var(--spacing-m));
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

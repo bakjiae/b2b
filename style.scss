@@ -2849,6 +2849,7 @@ $main-btn-max-width: 320px;
         padding: var(--spacing-m) var(--spacing-l);
         gap: var(--spacing-s);
         z-index: 100;
+        transition: opacity .2s ease, transform .2s ease;
 
         &-main {
             flex: 1;
@@ -2862,13 +2863,6 @@ $main-btn-max-width: 320px;
             width: 100%;
             max-width: 480px;
             height: var(--height-xl);
-            transition: opacity .2s ease, transform .2s ease;
-
-            &.is-hidden {
-                opacity: 0;
-                transform: translateY(var(--spacing-m));
-                pointer-events: none;
-            }
         }
 
         .goto-top {
@@ -2881,6 +2875,12 @@ $main-btn-max-width: 320px;
             background: var(--opacity-white);
             border-radius: var(--radius-round);
             border: var(--strokewidths-thin) solid var(--opacity-black100);
+        }
+
+        &.is-hidden {
+            opacity: 0;
+            transform: translateY(var(--spacing-m));
+            pointer-events: none;
         }
     }
 }
