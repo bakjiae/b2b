@@ -1672,6 +1672,7 @@ body.is-announcement-hidden {
             position: relative;
             z-index: 1;
             flex: 1;
+            width: 100%;
             min-width: 0;
             padding: calc(72/$title-fs*1em);
             padding-right: 40%;
@@ -2360,7 +2361,7 @@ body.is-announcement-hidden {
 
     &-toggle {
         flex: none;
-        width: 2.5em;
+        width: 2em;
         aspect-ratio: 1 / 1;
         text-align: center;
         color: var(--opacity-white600);
@@ -2705,6 +2706,7 @@ body.is-announcement-hidden {
         gap: var(--spacing-m);
 
         a {
+            padding: var(--spacing-xxs);
             color: var(--gray-600);
             @include body2;
             text-decoration: none;
@@ -2940,22 +2942,6 @@ body.is-announcement-hidden {
             height: var(--height-xl);
         }
 
-        .goto-top {
-            flex: none;
-            width: var(--height-xl);
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--opacity-white);
-            border-radius: var(--radius-round);
-            border: var(--strokewidths-thin) solid var(--opacity-black100);
-
-            .icon {
-                width: var(--height-s);
-            }
-        }
-
         &.is-hidden {
             opacity: 0;
             transform: translateY(var(--spacing-m));
@@ -3004,28 +2990,25 @@ body.is-announcement-hidden {
         opacity: 0;
         transition: opacity .2s ease;
     }
-
+    
     &.is-open &-backdrop {
         opacity: 1;
     }
-
+    
     &-dialog {
         position: relative;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
         border-radius: var(--radius-xxl);
         overflow: hidden;
         width: min(100%, 480px);
         max-height: min(92vh, 720px);
+        background: var(--opacity-white);
         transform: translateY(12px) scale(.98);
         transition: transform .24s ease, opacity .24s ease;
+        @include shadow-05dp;
         opacity: 0;
-
-        &-inner {
-            padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
-            background: var(--opacity-white);
-            overflow-y: auto;
-            @include shadow-05dp;
-        }
     }
 
     &.is-open &-dialog {
@@ -3037,6 +3020,17 @@ body.is-announcement-hidden {
         width: min(100%, 360px);
     }
 
+
+    &-container {
+        flex: 1;
+        overflow-y: auto;
+        
+        &-inner {
+            padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
+            overflow-y: auto;
+
+        }
+    }
 
     &-close {
         position: absolute;

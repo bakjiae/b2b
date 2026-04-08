@@ -16,39 +16,40 @@
     <div class="modal" id="pilot-modal" hidden>
         <div class="modal-backdrop" onclick="closeModal('pilot-modal')"></div>
         <div class="modal-dialog">
-            <div class="modal-dialog-inner">
-                <button type="button" class="modal-close" onclick="closeModal('pilot-modal')"></button>
+            <button type="button" class="modal-close" onclick="closeModal('pilot-modal')"></button>
+            <div class="modal-container">
+                <div class="modal-container-inner">
+                    <h2 class="modal-title">2주 무료 파일럿 신청</h2>
+                    <p class="modal-desc">정보를 남겨주시면 바로 시작할 수 있도록 안내해 드립니다.</p>
 
-                <h2 class="modal-title">2주 무료 파일럿 신청</h2>
-                <p class="modal-desc">정보를 남겨주시면 바로 시작할 수 있도록 안내해 드립니다.</p>
+                    <form class="pilot-modal-form">
+                        <div>
+                            <label class="f-lbl" for="pilot-m-name">이름<span class="req">*</span></label>
+                            <input class="f-inp" id="pilot-m-name" name="name" type="text" placeholder="이름" required
+                                autocomplete="name" />
+                        </div>
+                        <div>
+                            <label class="f-lbl" for="pilot-m-company">회사명<span class="req">*</span></label>
+                            <input class="f-inp" id="pilot-m-company" name="company" type="text" placeholder="(주)회사명"
+                                required autocomplete="organization" />
+                        </div>
+                        <div>
+                            <label class="f-lbl" for="pilot-m-email">회사 이메일<span class="req">*</span></label>
+                            <input class="f-inp" id="pilot-m-email" name="email" type="email"
+                                placeholder="company@email.com" required autocomplete="email" />
+                        </div>
+                        <div>
+                            <label class="f-lbl" for="pilot-m-phone">휴대폰 번호<span class="req">*</span></label>
+                            <input class="f-inp" id="pilot-m-phone" name="phone" type="tel" placeholder="010-1234-1234"
+                                required autocomplete="tel" />
+                        </div>
 
-                <form class="pilot-modal-form">
-                    <div>
-                        <label class="f-lbl" for="pilot-m-name">이름<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-name" name="name" type="text" placeholder="이름" required
-                            autocomplete="name" />
-                    </div>
-                    <div>
-                        <label class="f-lbl" for="pilot-m-company">회사명<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-company" name="company" type="text" placeholder="(주)회사명"
-                            required autocomplete="organization" />
-                    </div>
-                    <div>
-                        <label class="f-lbl" for="pilot-m-email">회사 이메일<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-email" name="email" type="email"
-                            placeholder="company@email.com" required autocomplete="email" />
-                    </div>
-                    <div>
-                        <label class="f-lbl" for="pilot-m-phone">휴대폰 번호<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-phone" name="phone" type="tel" placeholder="010-1234-1234"
-                            required autocomplete="tel" />
-                    </div>
+                        <button type="submit" class="btn"
+                            onclick="openModal('pilot-done-modal'); closeModal('pilot-modal')">파일럿 신청하기</button>
+                    </form>
 
-                    <button type="submit" class="btn"
-                        onclick="openModal('pilot-done-modal'); closeModal('pilot-modal')">파일럿 신청하기</button>
-                </form>
-
-                <p class="pilot-modal-foot">수집된 정보는 파일럿 체험 안내 목적으로만 사용됩니다</p>
+                    <p class="pilot-modal-foot">수집된 정보는 파일럿 체험 안내 목적으로만 사용됩니다</p>
+                </div>
             </div>
         </div>
     </div>
@@ -641,7 +642,7 @@
             <div class="inner">
                 <ul class="appeal-grid">
                     <li class="appeal-item hero">
-                        <h2 class="title">링고라를 선택하는 이유</h2>
+                        <h2 class="title">링고라를<br>선택하는 이유</h2>
                         <p class="lead">580개 이상의 고객사가 링고라를 선택한 이유입니다.</p>
                     </li>
                     <li class="appeal-item yellow">
@@ -964,7 +965,8 @@
                             </div>
                         </div>
                         <div class="inquiry-field inquiry-full">
-                            <label class="f-lbl" for="inq-msg">문의 내용<br><span class="inquiry-legal">도입 목적과 수강 대상을 구체적으로 남겨주시면, 귀사에 맞춘 교육 제안을 더욱 빠르게 받아보실 수 있습니다.</span></label>
+                            <label class="f-lbl" for="inq-msg">문의 내용<br><span class="inquiry-legal">도입 목적과 수강 대상을 구체적으로
+                                    남겨주시면, 귀사에 맞춘 교육 제안을 더욱 빠르게 받아보실 수 있습니다.</span></label>
                             <textarea class="f-ta" id="inq-msg" name="message"
                                 placeholder="궁금한 점이나 특이 사항을 자유롭게 적어주세요."></textarea>
                         </div>
@@ -1067,7 +1069,7 @@
             <div class="fab">
                 <div class="fab-main"><button class="btn gradient" onclick="scrollToSection('inquiry')">10초만에 기업교육
                         문의하기</button></div>
-                <button class="goto-top" onclick="scrollToSection('top')">
+                <button class="btn border icon-only" onclick="scrollToSection('top')">
                     <div class="icon arrow-up"></div>
                 </button>
             </div>

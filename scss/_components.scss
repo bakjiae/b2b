@@ -98,6 +98,12 @@
         }
     }
 
+    &.icon-only {
+        padding: var(--spacing-xxs);
+        width: auto !important;
+        aspect-ratio: 1 / 1;
+    }
+
 }
 
 $f-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%235E5A66' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -126,7 +132,7 @@ $f-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     display: block;
     width: 100%;
     min-height: var(--height-l);
-    padding: var(--spacing-xs) var(--spacing-m);
+    padding: var(--spacing-xs) var(--spacing-s);
     border: var(--strokewidths-thin) solid var(--gray-400);
     border-radius: var(--radius-m);
     background: var(--opacity-white);
