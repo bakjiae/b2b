@@ -158,7 +158,7 @@ body.is-announcement-hidden {
             top: $header-height - 1px;
         }
     }
-    
+
     .solution-detail {
         &-nav {
             top: $header-height;
@@ -2677,82 +2677,6 @@ body.is-announcement-hidden {
 
 }
 
-.modal {
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-m);
-
-    &[hidden] {
-        display: none !important;
-    }
-
-    .btn {
-        margin: 0 auto;
-        width: 100%;
-        max-width: $main-btn-max-width;
-        height: var(--height-xl);
-    }
-
-    &-backdrop {
-        position: absolute;
-        inset: 0;
-        background: var(--opacity-black600);
-    }
-
-    &-dialog {
-        position: relative;
-        z-index: 1;
-        border-radius: var(--radius-xxl);
-        overflow: hidden;
-
-        &-inner {
-            padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
-            width: min(100%, 480px);
-            height: 100%;
-            max-height: min(92vh, 720px);
-            background: var(--opacity-white);
-            overflow-y: auto;
-            @include shadow-05dp;
-        }
-    }
-
-    &-close {
-        position: absolute;
-        top: var(--spacing-s);
-        right: var(--spacing-s);
-        width: var(--height-l);
-        height: var(--height-l);
-        border: 0;
-        border-radius: var(--radius-round);
-        background: url("img/ic_close_line.svg") no-repeat center center;
-    }
-
-
-    &-title {
-        margin: 0 0 var(--spacing-s);
-        color: var(--opacity-black);
-        @include h1;
-        text-align: center;
-    }
-
-    &-desc {
-        margin: 0 0 var(--spacing-l);
-        color: var(--gray-600);
-        @include body1;
-        text-align: center;
-    }
-}
-
-// global state
-body.is-modal-open {
-    overflow: hidden;
-}
-
-/* Footer */
 .footer {
     @extend .layout;
     padding-bottom: 160px;
@@ -3038,4 +2962,109 @@ body.is-modal-open {
             pointer-events: none;
         }
     }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-m);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+
+    &[hidden] {
+        display: none !important;
+    }
+
+    &:not([hidden]) {
+        display: flex;
+    }
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .btn {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $main-btn-max-width;
+        height: var(--height-xl);
+    }
+
+    &-backdrop {
+        position: absolute;
+        inset: 0;
+        background: var(--opacity-black600);
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
+
+    &.is-open &-backdrop {
+        opacity: 1;
+    }
+
+    &-dialog {
+        position: relative;
+        z-index: 1;
+        border-radius: var(--radius-xxl);
+        overflow: hidden;
+        width: min(100%, 480px);
+        max-height: min(92vh, 720px);
+        transform: translateY(12px) scale(.98);
+        transition: transform .24s ease, opacity .24s ease;
+        opacity: 0;
+
+        &-inner {
+            padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
+            background: var(--opacity-white);
+            overflow-y: auto;
+            @include shadow-05dp;
+        }
+    }
+
+    &.is-open &-dialog {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    &.small &-dialog {
+        width: min(100%, 360px);
+    }
+
+
+    &-close {
+        position: absolute;
+        top: var(--spacing-s);
+        right: var(--spacing-s);
+        width: var(--height-l);
+        height: var(--height-l);
+        border: 0;
+        border-radius: var(--radius-round);
+        background: url("img/ic_close_line.svg") no-repeat center center;
+    }
+
+    &-title {
+        margin: 0 0 var(--spacing-s);
+        color: var(--opacity-black);
+        @include h1;
+        text-align: center;
+    }
+
+    &-desc {
+        margin: 0 0 var(--spacing-l);
+        color: var(--gray-600);
+        @include body1;
+        text-align: center;
+    }
+}
+
+// global state
+body.is-modal-open {
+    overflow: hidden;
 }

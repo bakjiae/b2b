@@ -48,7 +48,8 @@
     }
 
     &:disabled {
-        background-blend-mode: var(--gray-500);
+        background: var(--gray-500);
+        cursor: not-allowed;
     }
 
     &.gradient {
