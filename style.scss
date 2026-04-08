@@ -419,8 +419,15 @@ $main-btn-max-width: 320px;
             }
 
             &.last {
+                position: relative;
                 flex: none;
                 width: calc(110/$title-fs*1em);
+
+                video {
+                    position: absolute;
+                    bottom: 0;
+                    mix-blend-mode: darken;
+                }
             }
         }
 
