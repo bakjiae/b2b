@@ -745,7 +745,7 @@ $main-btn-max-width: 320px;
         padding: $section-padding-top-bottom 0;
 
         @media (max-width: $breakpoint-03) {
-            padding: $section-padding-top-bottom 0 !important;
+            padding: $section-padding-top-bottom 0 0 !important;
         }
     }
 
@@ -840,7 +840,7 @@ $main-btn-max-width: 320px;
 
     @media (max-width: $breakpoint-03) {
         &-box {
-            border-radius: var(--radius-xxxl);
+            border-radius: 0;
 
             &::before {
                 display: none;
@@ -1420,7 +1420,7 @@ $main-btn-max-width: 320px;
         padding: 0 0 $section-padding-top-bottom;
 
         @media (max-width: $breakpoint-03) {
-            padding: 0 0 $section-padding-top-bottom !important;
+            padding: 0 !important;
         }
     }
 
@@ -1442,6 +1442,8 @@ $main-btn-max-width: 320px;
 
         @media (max-width: $breakpoint-03) {
             padding: $section-padding-top-bottom var(--spacing-s);
+            border-radius: 0;
+            gap: var(--spacing-s);
         }
     }
 
@@ -2229,6 +2231,7 @@ $main-btn-max-width: 320px;
 
         &-cards {
             grid-template-columns: 1fr;
+            gap: var(--spacing-s);
         }
         
         &-card {

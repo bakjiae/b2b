@@ -1109,7 +1109,7 @@ p,
 }
 @media (max-width: 440px) {
   .solution .inner {
-    padding: 88px 0 !important;
+    padding: 88px 0 0 !important;
   }
 }
 .solution-box {
@@ -1192,7 +1192,7 @@ p,
 }
 @media (max-width: 440px) {
   .solution-box {
-    border-radius: var(--radius-xxxl);
+    border-radius: 0;
   }
   .solution-box::before {
     display: none;
@@ -1655,7 +1655,7 @@ p,
 }
 @media (max-width: 440px) {
   .process .inner {
-    padding: 0 0 88px !important;
+    padding: 0 !important;
   }
 }
 .process h2 {
@@ -1675,6 +1675,8 @@ p,
 @media (max-width: 440px) {
   .process-box {
     padding: 88px var(--spacing-s);
+    border-radius: 0;
+    gap: var(--spacing-s);
   }
 }
 .process-layout {
@@ -2365,6 +2367,7 @@ p,
   }
   .testimony-cards {
     grid-template-columns: 1fr;
+    gap: var(--spacing-s);
   }
   .testimony-card {
     padding: var(--spacing-l);
