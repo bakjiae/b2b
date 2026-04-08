@@ -1930,8 +1930,11 @@ $main-btn-max-width: 320px;
         }
 
         &-item {
+            padding: var(--spacing-l);
+            
             &.hero {
                 grid-column: auto;
+                padding: var(--spacing-l);
             }
         }
     }
@@ -2216,6 +2219,15 @@ $main-btn-max-width: 320px;
 
         &-cards {
             grid-template-columns: 1fr;
+        }
+        
+        &-card {
+            padding: var(--spacing-l);
+
+            .quote {
+                width:  var(--height-xs);
+                margin-bottom: var(--spacing-s);
+            }
         }
 
         &-more {
@@ -2854,7 +2866,7 @@ body.is-modal-open {
         min-height: 200px;
 
         @media (max-width: $breakpoint-02) {
-            padding-right: var(--spacing-xl);
+            padding: var(--spacing-l);
         }
 
         &-sub {

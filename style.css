@@ -2110,8 +2110,12 @@ p,
   .appeal-grid {
     grid-template-columns: 1fr;
   }
+  .appeal-item {
+    padding: var(--spacing-l);
+  }
   .appeal-item.hero {
     grid-column: auto;
+    padding: var(--spacing-l);
   }
 }
 
@@ -2352,6 +2356,13 @@ p,
   }
   .testimony-cards {
     grid-template-columns: 1fr;
+  }
+  .testimony-card {
+    padding: var(--spacing-l);
+  }
+  .testimony-card .quote {
+    width: var(--height-xs);
+    margin-bottom: var(--spacing-s);
   }
   .testimony-more {
     align-self: center;
@@ -2926,7 +2937,7 @@ body.is-modal-open {
 }
 @media (max-width: 768px) {
   .footer-cta {
-    padding-right: var(--spacing-xl);
+    padding: var(--spacing-l);
   }
 }
 .footer-cta-sub {
