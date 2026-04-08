@@ -2644,6 +2644,8 @@ p,
 }
 .pilot-visual {
   position: relative;
+  width: 30%;
+  max-width: 240px;
   flex: none;
   overflow: visible;
 }
@@ -2653,7 +2655,6 @@ p,
 }
 .pilot-visual-box img {
   display: block;
-  width: 240px;
   height: auto;
 }
 .pilot-badge {
@@ -2700,6 +2701,10 @@ p,
     flex-direction: column;
     gap: 0;
     text-align: center;
+  }
+  .pilot-badge {
+    top: unset;
+    bottom: var(--spacing-m);
   }
   .pilot-copy {
     text-align: center;

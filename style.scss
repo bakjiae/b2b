@@ -2549,6 +2549,8 @@ $main-btn-max-width: 320px;
 
     &-visual {
         position: relative;
+        width: 30%;
+        max-width: 240px;
         flex: none;
         overflow: visible;
     }
@@ -2559,7 +2561,6 @@ $main-btn-max-width: 320px;
 
         img {
             display: block;
-            width: 240px;
             height: auto;
         }
     }
@@ -2609,6 +2610,11 @@ $main-btn-max-width: 320px;
             flex-direction: column;
             gap: 0;
             text-align: center;
+        }
+
+        &-badge {
+            top: unset;
+            bottom: var(--spacing-m);
         }
 
         &-copy {
