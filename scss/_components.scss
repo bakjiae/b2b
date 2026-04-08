@@ -183,3 +183,25 @@ $f-select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         cursor: pointer;
     }
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--opacity-black100) transparent;
+
+    &::-webkit-scrollbar {
+        width: var(--spacing-xxs);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--opacity-black100);
+        border-radius: var(--radius-round);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--opacity-black300);
+    }
+}
