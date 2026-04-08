@@ -334,6 +334,11 @@ $main-btn-max-width: 320px;
                 align-items: center;
                 justify-content: center;
                 margin-left: auto;
+                margin-right: calc(var(--spacing-s) * -1);
+
+                &-bars {
+                    margin-top: var(--spacing-xs);
+                }
             }
         }
     }
@@ -751,7 +756,7 @@ $main-btn-max-width: 320px;
         align-items: center;
         justify-content: center;
         gap: calc(56/$title-fs*1em);
-        padding: $section-padding-top-bottom calc(56/$title-fs*1em);
+        padding: $section-padding-top-bottom 0;
         border-radius: calc(72/$title-fs*1em);
         background: linear-gradient(100deg, var(--Primary-500, rgba(102, 45, 223, 0.20)) 3.27%, var(--Success-600, rgba(6, 191, 157, 0.20)) 96.73%), var(--Opacity-Black, #121214);
 
@@ -766,11 +771,20 @@ $main-btn-max-width: 320px;
         }
 
         h2 {
+            padding: 0 calc(56/$title-fs*1em);
             font-size: 1em;
             color: var(--opacity-white);
             text-align: center;
             line-height: 125%;
         }
+    }
+
+    &-list {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-color: var(--opacity-white300) transparent;
 
         img {
             width: 100%;
@@ -780,11 +794,9 @@ $main-btn-max-width: 320px;
         ul {
             display: flex;
             gap: var(--spacing-s);
-            width: 100%;
-
-            @media screen and (max-width: $breakpoint-02) {
-                flex-direction: column;
-            }
+            padding: 0 calc(56/$title-fs*1em);
+            width: fit-content;
+            min-width: 100%;
         }
 
         li {
@@ -823,6 +835,7 @@ $main-btn-max-width: 320px;
                 color: var(--infomation-800);
             }
         }
+
     }
 
     @media (max-width: $breakpoint-03) {
@@ -1458,7 +1471,6 @@ $main-btn-max-width: 320px;
             display: flex;
             flex-direction: column;
             gap: var(--spacing-s);
-            flex-wrap: wrap;
             width: 100%;
 
             &::before {
@@ -1498,15 +1510,23 @@ $main-btn-max-width: 320px;
         @media (max-width: $breakpoint-01) {
             max-width: unset;
             width: 100%;
+            flex-direction: column-reverse;
 
             ol {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                // display: grid;
+                // grid-template-columns: repeat(2, 1fr);
+                flex-direction: row;
                 width: 100%;
                 gap: var(--spacing-xs);
+                overflow-x: auto;
+                scrollbar-color: var(--opacity-white300) transparent;
 
                 &::before {
                     display: none;
+                }
+
+                li {
+                    flex: none;
                 }
             }
 
@@ -2562,6 +2582,7 @@ $main-btn-max-width: 320px;
     @media (max-width: $breakpoint-02) {
         &-layout {
             flex-direction: column;
+            gap: 0;
             text-align: center;
         }
 
@@ -2626,7 +2647,7 @@ $main-btn-max-width: 320px;
             height: 100%;
             max-height: min(92vh, 720px);
             background: var(--opacity-white);
-            overflow: auto;
+            overflow-y: auto;
             @include shadow-05dp;
         }
     }
@@ -2802,7 +2823,7 @@ body.is-modal-open {
             color: var(--primary-500);
             @include body1b;
         }
-    
+
         &-row {
             display: flex;
             align-items: center;
@@ -2810,11 +2831,11 @@ body.is-modal-open {
             margin: 0;
             color: var(--gray-800);
             @include body2;
-    
+
             a {
                 color: inherit;
                 text-decoration: none;
-    
+
                 &:hover {
                     color: var(--primary-600);
                     text-decoration: underline;
@@ -2841,30 +2862,30 @@ body.is-modal-open {
             color: var(--gray-600);
             @include body2;
         }
-    
+
         &-title {
             margin: 0 0 var(--spacing-l);
             color: var(--primary-600);
             @include h1;
             line-height: 1.3;
         }
-    
+
         &-store {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: var(--spacing-xxs) var(--spacing-xs);
-    
+
             a {
                 display: inline-flex;
                 height: var(--height-m);
-        
+
                 &:hover {
                     opacity: 0.88;
                 }
             }
         }
-    
+
         &-img {
             position: absolute;
             top: 50%;
