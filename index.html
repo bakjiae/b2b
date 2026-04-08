@@ -52,6 +52,17 @@
         </div>
     </div>
 
+    <div class="modal" id="inquiry-done-modal" hidden>
+        <div class="modal-backdrop" onclick="closeModal('inquiry-done-modal')"></div>
+        <div class="modal-dialog">
+            <div class="modal-dialog-inner">
+                <h2 class="modal-title">문의가 접수되었습니다.</h2>
+                <p class="modal-desc">문의해 주셔서 감사합니다. </p>
+                <button type="button" class="btn" onclick="closeModal('inquiry-done-modal')">확인</button>
+            </div>
+        </div>
+    </div>
+
     <button class="announcement-bar" onclick="openModal('pilot-modal')">
         <div class="inner">
             <p><em>기업 외국어 교육 파일럿</em> 부담 없이 <em>무료</em>로 직접 체험해 보세요 →</p>
@@ -947,7 +958,7 @@
                             <p class="inquiry-mkt-hint"><em>무료 HR 뉴스레터, 교육 자료, 웨비나 및 이벤트 소식</em>을 받아보실 수 있습니다.</p>
                         </div>
                         <div class="inquiry-actions">
-                            <button type="submit" class="btn inquiry-submit">도입 문의하기</button>
+                            <button type="submit" class="btn inquiry-submit" onclick="openModal('inquiry-done-modal')">도입 문의하기</button>
                         </div>
                     </form>
                 </div>

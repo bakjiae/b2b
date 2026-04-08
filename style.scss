@@ -457,6 +457,10 @@ body.is-announcement-hidden {
                     position: absolute;
                     bottom: 0;
                     mix-blend-mode: darken;
+
+                    @media (max-width: $breakpoint-03) {
+                        display: none;
+                    }
                 }
             }
         }

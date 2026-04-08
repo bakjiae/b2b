@@ -895,6 +895,11 @@ body.is-announcement-hidden .solution-detail-nav {
   bottom: 0;
   mix-blend-mode: darken;
 }
+@media (max-width: 440px) {
+  .hero-visual .rec.last video {
+    display: none;
+  }
+}
 .hero-visual .line {
   display: flex;
   align-items: center;
