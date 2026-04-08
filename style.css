@@ -1846,7 +1846,7 @@ p,
   position: relative;
   overflow: hidden;
   width: 100%;
-  touch-action: none;
+  touch-action: pan-y;
   -moz-user-select: none;
        user-select: none;
   -webkit-user-select: none;
@@ -2161,6 +2161,9 @@ p,
   flex-direction: column;
   padding: var(--spacing-s) 0;
 }
+.compare-column.question {
+  min-width: 400px;
+}
 .compare-column.question .compare-cell {
   justify-content: flex-start;
   align-items: flex-start;
@@ -2351,6 +2354,12 @@ p,
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 768px) {
+  .testimony .inner {
+    padding-bottom: 0;
+  }
+  .testimony-marquee {
+    margin-top: 0;
+  }
   .testimony-row {
     flex-direction: column;
   }

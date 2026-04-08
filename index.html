@@ -35,8 +35,8 @@
                     </div>
                     <div>
                         <label class="f-lbl" for="pilot-m-email">회사 이메일<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-email" name="email" type="email" placeholder="company@email.com"
-                            required autocomplete="email" />
+                        <input class="f-inp" id="pilot-m-email" name="email" type="email"
+                            placeholder="company@email.com" required autocomplete="email" />
                     </div>
                     <div>
                         <label class="f-lbl" for="pilot-m-phone">휴대폰 번호<span class="req">*</span></label>
@@ -764,7 +764,9 @@
                             <p class="foot">대형 금융사 B사</p>
                         </li>
                     </ul>
-                    <button type="button" class="testimony-more" onclick="window.open('https://blog.naver.com/tutoring360', '_blank')">더 많은 <br class="pc_only">성공 사례 보기 →</button>
+                    <button type="button" class="testimony-more"
+                        onclick="window.open('https://blog.naver.com/tutoring360', '_blank')">더 많은 <br
+                            class="pc_only">성공 사례 보기 →</button>
                 </div>
             </div>
         </section>
@@ -979,11 +981,13 @@
                     <a href="https://lingora.app/home/terms/policy">이용약관</a>
                 </nav>
                 <ul class="footer-social">
-                    <li><a href="https://www.linkedin.com/company/lingoracorp/?originalSubdomain=kr" class="footer-social-link in"></a></li>
+                    <li><a href="https://www.linkedin.com/company/lingoracorp/?originalSubdomain=kr"
+                            class="footer-social-link in"></a></li>
                     <li><a href="https://blog.naver.com/tutoring360" class="footer-social-link blog"></a></li>
                     <li><a href="https://www.facebook.com/tutoring.co.kr/" class="footer-social-link fb"></a></li>
                     <li><a href="https://www.instagram.com/lingora_tutoring/" class="footer-social-link ig"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCeFEN4ISfeTAOSFUPnm5utA" class="footer-social-link yt"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCeFEN4ISfeTAOSFUPnm5utA"
+                            class="footer-social-link yt"></a></li>
                 </ul>
             </div>
 
@@ -1203,29 +1207,67 @@
                 }
 
                 if (panelList) {
+                    var swipeStartX = null;
+                    var swipeStartY = null;
+                    var swipePointerId = null;
+                    var swipeLock = null; // 'x' | 'y' | null
+
                     panelList.addEventListener('pointerdown', function (e) {
                         if (e.pointerType === 'mouse' && e.button !== 0) return;
+
                         swipeStartX = e.clientX;
+                        swipeStartY = e.clientY;
                         swipePointerId = e.pointerId;
+                        swipeLock = null;
+
                         try {
                             panelList.setPointerCapture(e.pointerId);
                         } catch (err) { }
                     });
 
+                    panelList.addEventListener('pointermove', function (e) {
+                        if (swipePointerId !== e.pointerId || swipeStartX === null) return;
+
+                        var dx = e.clientX - swipeStartX;
+                        var dy = e.clientY - swipeStartY;
+
+                        // 처음 방향을 잠금: 가로가 우세하면 스와이프 모드
+                        if (swipeLock === null) {
+                            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; // 노이즈 컷
+                            swipeLock = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+                        }
+
+                        // 가로 스와이프 모드일 때만 브라우저 스크롤/제스처를 막음
+                        if (swipeLock === 'x') {
+                            e.preventDefault();
+                        }
+                    }, { passive: false });
+
                     panelList.addEventListener('pointerup', function (e) {
                         if (swipePointerId !== e.pointerId || swipeStartX === null) return;
+
                         var dx = e.clientX - swipeStartX;
+
                         swipeStartX = null;
+                        swipeStartY = null;
                         swipePointerId = null;
+
                         try {
                             panelList.releasePointerCapture(e.pointerId);
                         } catch (err) { }
-                        applySwipeDelta(dx);
+
+                        // 가로로 잠금된 경우에만 패널 전환
+                        if (swipeLock === 'x') {
+                            applySwipeDelta(dx);
+                        }
+                        swipeLock = null;
                     });
 
                     panelList.addEventListener('pointercancel', function () {
                         swipeStartX = null;
+                        swipeStartY = null;
                         swipePointerId = null;
+                        swipeLock = null;
                     });
                 }
 
