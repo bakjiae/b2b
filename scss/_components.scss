@@ -3,7 +3,7 @@
 .icon {
     flex: none;
     display: block;
-    width: 1.5em;
+    width: 1.1em;
     aspect-ratio: 1 / 1;
     background-size: contain;
     background-repeat: no-repeat;
@@ -15,6 +15,14 @@
 
     &.thumb-up {
         background-image: url('img/ic_thumbup_line.svg');
+    }
+    
+    &.mail {
+        background-image: url('img/ic_mail_line.svg');
+    }
+    
+    &.phone {
+        background-image: url('img/ic_call.svg');
     }
 }
 

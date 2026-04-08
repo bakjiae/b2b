@@ -22,25 +22,25 @@
                 <h2 class="modal-title">2주 무료 파일럿 신청</h2>
                 <p class="modal-desc">정보를 남겨주시면 바로 시작할 수 있도록 안내해 드립니다.</p>
 
-                <form class="pilot-modal-form" action="#" method="post">
+                <form class="pilot-modal-form">
                     <div>
                         <label class="f-lbl" for="pilot-m-name">이름<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-name" name="name" type="text" placeholder="홍길동" required
+                        <input class="f-inp" id="pilot-m-name" name="name" type="text" placeholder="이름" required
                             autocomplete="name" />
                     </div>
                     <div>
                         <label class="f-lbl" for="pilot-m-company">회사명<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-company" name="company" type="text" placeholder="(주)링고라"
+                        <input class="f-inp" id="pilot-m-company" name="company" type="text" placeholder="(주)회사명"
                             required autocomplete="organization" />
                     </div>
                     <div>
                         <label class="f-lbl" for="pilot-m-email">회사 이메일<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-email" name="email" type="email" placeholder="name@company.com"
+                        <input class="f-inp" id="pilot-m-email" name="email" type="email" placeholder="company@email.com"
                             required autocomplete="email" />
                     </div>
                     <div>
-                        <label class="f-lbl" for="pilot-m-phone">연락처<span class="req">*</span></label>
-                        <input class="f-inp" id="pilot-m-phone" name="phone" type="tel" placeholder="010-0000-0000"
+                        <label class="f-lbl" for="pilot-m-phone">휴대폰 번호<span class="req">*</span></label>
+                        <input class="f-inp" id="pilot-m-phone" name="phone" type="tel" placeholder="010-1234-1234"
                             required autocomplete="tel" />
                     </div>
 
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <button class="announcement-bar">
+    <button class="announcement-bar" onclick="openModal('pilot-modal')">
         <div class="inner">
             <p><em>기업 외국어 교육 파일럿</em> 부담 없이 <em>무료</em>로 직접 체험해 보세요 →</p>
         </div>
@@ -838,8 +838,6 @@
                     </div>
                     <aside class="faq-aside">
                         <div class="faq-cta">
-                            <img class="faq-cta-img" src="img/tudal_hand_waving_native.png" width="200" height="200"
-                                alt="" />
                             <div class="faq-cta-text">
                                 <h3 class="faq-cta-title">더 궁금한 게 있으신가요?</h3>
                                 <p class="faq-cta-desc">명확한 계획이 없어도 괜찮습니다. 규모와 목적에 맞게 빠르게 안내해 드립니다.</p>
@@ -870,12 +868,12 @@
                     <form class="inquiry-form" action="#" method="post">
                         <div class="inquiry-grid">
                             <div>
-                                <label class="f-lbl" for="inq-name">이름 <span class="req">*</span></label>
+                                <label class="f-lbl" for="inq-name">이름<span class="req">*</span></label>
                                 <input class="f-inp" id="inq-name" name="name" type="text" placeholder="이름" required
                                     autocomplete="name" />
                             </div>
                             <div>
-                                <label class="f-lbl" for="inq-company">회사명 <span class="req">*</span></label>
+                                <label class="f-lbl" for="inq-company">회사명<span class="req">*</span></label>
                                 <input class="f-inp" id="inq-company" name="company" type="text" placeholder="(주)회사명"
                                     required autocomplete="organization" />
                             </div>
@@ -885,13 +883,13 @@
                                     placeholder="company@email.com" required autocomplete="email" />
                             </div>
                             <div>
-                                <label class="f-lbl" for="inq-phone">휴대폰 번호 <span class="req">*</span></label>
+                                <label class="f-lbl" for="inq-phone">휴대폰 번호<span class="req">*</span></label>
                                 <input class="f-inp" id="inq-phone" name="phone" type="tel" placeholder="010-1234-1234"
                                     required autocomplete="tel" />
                             </div>
                         </div>
                         <div class="inquiry-field inquiry-full">
-                            <p class="f-lbl" id="inq-edu-label">교육 도입 현황 <span class="req">*</span></p>
+                            <p class="f-lbl" id="inq-edu-label">교육 도입 현황<span class="req">*</span></p>
                             <div class="f-opts">
                                 <label><input type="radio" name="edu_status" value="new" required /> 신규 교육 도입 검토</label>
                                 <label><input type="radio" name="edu_status" value="replace" /> 기존 업체 교체 검토</label>
@@ -901,7 +899,7 @@
                         </div>
                         <div class="inquiry-grid">
                             <div>
-                                <label class="f-lbl" for="inq-headcount">예상 교육 인원 <span class="req">*</span></label>
+                                <label class="f-lbl" for="inq-headcount">예상 교육 인원<span class="req">*</span></label>
                                 <select class="f-sel" id="inq-headcount" name="headcount" required>
                                     <option value="" disabled selected>예상 교육 인원을 선택해 주세요.</option>
                                     <option value="1">1~9명</option>
@@ -911,7 +909,7 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="f-lbl" for="inq-source">문의 경로 <span class="req">*</span></label>
+                                <label class="f-lbl" for="inq-source">문의 경로<span class="req">*</span></label>
                                 <select class="f-sel" id="inq-source" name="source" required>
                                     <option value="" disabled selected>알게된 경로를 알려주세요.</option>
                                     <option value="search">검색</option>
@@ -922,7 +920,7 @@
                             </div>
                         </div>
                         <div class="inquiry-field inquiry-full">
-                            <p class="f-lbl" id="inq-svc-label">관심 서비스 <span class="req opt">(복수 선택 가능)</span></p>
+                            <p class="f-lbl" id="inq-svc-label">관심 서비스<span class="req opt">(복수 선택 가능)</span></p>
                             <div class="f-opts">
                                 <label><input type="checkbox" name="interest" value="phone" /> 1:1 전화/화상수업</label>
                                 <label><input type="checkbox" name="interest" value="offline" /> 오프라인 출강</label>
@@ -999,14 +997,14 @@
                         통신판매사업 대표번호 1522-7802<br>
                         서울특별시 강남구 테헤란로7길 12, 3층
                     </p>
-                    <div class="footer-b2b">
-                        <p class="footer-b2b-title">B2B Team</p>
-                        <p class="footer-b2b-row">
-                            <span class="footer-ic mail"></span>
+                    <div class="footer-group">
+                        <p class="footer-group-title">B2B Team</p>
+                        <p class="footer-group-row">
+                            <span class="icon mail"></span>
                             <a href="mailto:b2b@tutoring.co.kr">b2b@tutoring.co.kr</a>
                         </p>
-                        <p class="footer-b2b-row">
-                            <span class="footer-ic phone"></span>
+                        <p class="footer-group-row">
+                            <span class="icon phone"></span>
                             <a href="tel:025180061">02-518-0061</a>
                         </p>
                     </div>
@@ -1018,13 +1016,9 @@
                         기업 외국어 교육의<br />
                         새로운 기준을 만들어갑니다.
                     </p>
-                    <div class="footer-badges">
-                        <a href="" class="footer-badge-as">
-                            <img src="img/img_app_appstore.png" alt="" />
-                        </a>
-                        <a href="" class="footer-badge-gp">
-                            <img src="img/img_app_googleplay.png" alt="" />
-                        </a>
+                    <div class="footer-cta-store">
+                        <a href=""><img src="img/img_app_appstore.png" alt="" /></a>
+                        <a href=""><img src="img/img_app_googleplay.png" alt="" /></a>
                     </div>
                     <img class="footer-cta-img" src="img/img_app_mockup.png" width="400" height="240" alt="" />
                 </div>
