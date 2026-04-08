@@ -329,6 +329,9 @@ p,
 .icon.phone {
   background-image: url("img/ic_call.svg");
 }
+.icon.arrow-up {
+  background-image: url("img/ic_arrow_up_line.svg");
+}
 
 .btn {
   position: relative;
@@ -628,6 +631,22 @@ p,
     font-weight: 400;
     line-height: 20px;
   }
+}
+
+body.is-announcement-hidden .anchor {
+  top: calc(-72px);
+}
+body.is-announcement-hidden .announcement-bar {
+  transform: translateY(-100%);
+}
+body.is-announcement-hidden .header {
+  top: 0;
+}
+body.is-announcement-hidden .header-menu {
+  top: 71px;
+}
+body.is-announcement-hidden .solution-detail-nav {
+  top: 72px;
 }
 
 .header {
@@ -1746,7 +1765,8 @@ p,
   }
   .process-nav ol {
     flex-direction: row;
-    width: 100%;
+    width: calc(100% + 2.3333333333em);
+    padding: 0 1.1666666667em;
     gap: var(--spacing-xs);
     overflow-x: auto;
     scrollbar-color: var(--opacity-white300) transparent;
@@ -2221,7 +2241,7 @@ p,
 }
 
 .testimony .inner {
-  padding: 88px 0;
+  padding: 0 0 88px;
   min-width: 0;
 }
 .testimony-marquee {
@@ -2268,7 +2288,7 @@ p,
   padding: 88px 0;
 }
 .testimony-title {
-  margin: 0 0 88px;
+  margin: 88px 0;
   text-align: center;
 }
 .testimony-row {
@@ -2364,6 +2384,9 @@ p,
   }
   .testimony-row {
     flex-direction: column;
+  }
+  .testimony-title {
+    margin: var(--spacing-xl) 0;
   }
   .testimony-cards {
     grid-template-columns: 1fr;
@@ -2461,11 +2484,14 @@ p,
   transition: transform 0.3s ease;
 }
 .faq-panel {
-  padding: 0 0 var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+  padding: var(--spacing-m);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: var(--opacity-black600);
+  border-radius: var(--radius-l);
+  background: var(--gray-100);
 }
 .faq-panel p {
   margin: 0;
@@ -2663,7 +2689,7 @@ p,
   line-height: 20px;
   position: absolute;
   z-index: 1;
-  top: var(--spacing-m);
+  top: 10%;
   right: 0;
   transform: translateX(20%);
   padding: var(--spacing-xxs) var(--spacing-s);
@@ -2703,8 +2729,10 @@ p,
     text-align: center;
   }
   .pilot-badge {
-    top: unset;
-    bottom: var(--spacing-m);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: var(--spacing-xxs);
   }
   .pilot-copy {
     text-align: center;
@@ -3055,6 +3083,9 @@ body.is-modal-open {
   background: var(--opacity-white);
   border-radius: var(--radius-round);
   border: var(--strokewidths-thin) solid var(--opacity-black100);
+}
+.footer .fab .goto-top .icon {
+  width: var(--height-s);
 }
 .footer .fab.is-hidden {
   opacity: 0;

@@ -283,19 +283,19 @@
                         <ul>
                             <li>
                                 <a href="#solution-phone" class="tab active phone">
-                                    <img src="img/img_solution_01.png" alt="" width="48" height="48">
+                                    <img src="img/img_solution_01.png" alt="">
                                     <span class="tab-label">1:1 전화/화상</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#solution-offline" class="tab offline">
-                                    <img src="img/img_solution_02.png" alt="" width="48" height="48">
+                                    <img src="img/img_solution_02.png" alt="">
                                     <span class="tab-label">오프라인 출강</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#solution-ai" class="tab ai">
-                                    <img src="img/img_solution_03.png" alt="" width="48" height="48">
+                                    <img src="img/img_solution_03.png" alt="">
                                     <span class="tab-label">AI 학습</span>
                                 </a>
                             </li>
@@ -959,7 +959,7 @@
                     <div class="pilot-visual">
                         <span class="pilot-badge"><em>2주 무료 체험 제공</em></span>
                         <div class="pilot-visual-box">
-                            <img src="img/img_pilot.png" width="200" height="200" alt="" />
+                            <img src="img/img_pilot.png" alt="" />
                         </div>
                     </div>
                     <div class="pilot-text">
@@ -1028,7 +1028,7 @@
                         <a href=""><img src="img/img_app_appstore.png" alt="" /></a>
                         <a href=""><img src="img/img_app_googleplay.png" alt="" /></a>
                     </div>
-                    <img class="footer-cta-img" src="img/img_app_mockup.png" width="400" height="240" alt="" />
+                    <img class="footer-cta-img" src="img/img_app_mockup.png" alt="" />
                 </div>
             </div>
 
@@ -1038,10 +1038,7 @@
                 <div class="fab-main"><button class="btn gradient" onclick="scrollToSection('inquiry')">10초만에 기업교육
                         문의하기</button></div>
                 <button class="goto-top" onclick="scrollToSection('top')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 19L12 5M5 12L12 5L19 12" stroke="#000" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+                    <div class="icon arrow-up"></div>
                 </button>
             </div>
         </div>
@@ -1095,6 +1092,38 @@
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') setHeaderMenuOpen(false);
             });
+            (function initAnnouncementBarVisibility() {
+                var hideClass = 'is-announcement-hidden';
+                var lastY = window.scrollY || 0;
+                var ticking = false;
+                var THRESHOLD = 6;
+                function update() {
+                    ticking = false;
+                    var y = window.scrollY || 0;
+                    // 맨 위에서는 항상 보이게
+                    if (y <= 0) {
+                        document.body.classList.remove(hideClass);
+                        lastY = y;
+                        return;
+                    }
+                    var dy = y - lastY;
+                    if (Math.abs(dy) < THRESHOLD) return;
+                    if (dy > 0) {
+                        // 아래로 스크롤 -> 숨김
+                        document.body.classList.add(hideClass);
+                    } else {
+                        // 위로 스크롤 -> 표시
+                        document.body.classList.remove(hideClass);
+                    }
+                    lastY = y;
+                }
+                window.addEventListener('scroll', function () {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(update);
+                }, { passive: true });
+                update();
+            })();
 
             document.addEventListener(
                 'click',
