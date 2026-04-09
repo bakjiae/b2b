@@ -149,11 +149,11 @@ table {
   --success-400: #99E0D5;
   --success-300: #D4F7F2;
   --success-200: #E9F6F4;
-  --infomation-800: #0F50C6;
-  --infomation-600: #1E6DFF;
-  --infomation-500: #78A7FF;
-  --infomation-300: #D5E4FF;
-  --infomation-200: #EBF1FE;
+  --information-800: #0F50C6;
+  --information-600: #1E6DFF;
+  --information-500: #78A7FF;
+  --information-300: #D5E4FF;
+  --information-200: #EBF1FE;
   --warning-800: #CE7B00;
   --warning-700: #FF9900;
   --warning-600: #FFC226;
@@ -584,6 +584,10 @@ p,
   width: 100%;
 }
 
+.text-group {
+  display: inline-block;
+}
+
 .layout, .footer, .pilot, .inquiry, .faq, .testimony, .compare, .appeal, .process, .design, .solution-detail-section, .solution, .metric, .hero, .header, .announcement-bar {
   display: flex;
   justify-content: center;
@@ -633,9 +637,7 @@ p,
 }
 @media (max-width: 768px) {
   .announcement-bar p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
+    font-size: clamp(12px, 3.181818vw, 16px);
   }
 }
 
@@ -874,7 +876,7 @@ body.is-announcement-hidden .solution-detail-nav {
   background: var(--primary-300);
   transition: all 0.3s ease;
 }
-.hero-visual .rec.sqaure {
+.hero-visual .rec.square {
   flex: none;
   aspect-ratio: 1/1;
 }
@@ -994,6 +996,7 @@ body.is-announcement-hidden .solution-detail-nav {
   opacity: 0.6;
   mix-blend-mode: plus-lighter;
   filter: blur(var(--spacing-s));
+  transform: scale(1.2);
 }
 .hero-visual .animation .glow #hero-glow-line,
 .hero-visual .animation .glow #hero-glow-line-mobile {
@@ -1213,8 +1216,8 @@ body.is-announcement-hidden .solution-detail-nav {
   color: var(--success-800);
 }
 .solution-list .tag.ai {
-  background: var(--infomation-300);
-  color: var(--infomation-800);
+  background: var(--information-300);
+  color: var(--information-800);
 }
 @media (max-width: 440px) {
   .solution-box {
@@ -1400,11 +1403,11 @@ body.is-announcement-hidden .solution-detail-nav {
   }
 }
 .solution-detail-section.ai {
-  background: var(--infomation-200);
+  background: var(--information-200);
 }
 .solution-detail-section.ai .card li::before {
   content: "✓";
-  color: var(--infomation-800);
+  color: var(--information-800);
 }
 .solution-detail {
   /* solution-detail 상단: 이 섹션 안에서만 뷰포트 상단에 달라붙음 */
@@ -1472,7 +1475,7 @@ body.is-announcement-hidden .solution-detail-nav {
   background: var(--success-800);
 }
 .solution-detail .tab-list li:nth-child(3) a.active {
-  background: var(--infomation-600);
+  background: var(--information-600);
 }
 .solution-detail .tab-list li a {
   font-weight: 700;
@@ -1487,7 +1490,7 @@ body.is-announcement-hidden .solution-detail-nav {
   background: var(--success-800);
 }
 .solution-detail .tab-list li a.active.ai {
-  background: var(--infomation-600);
+  background: var(--information-600);
 }
 @media (max-width: 768px) {
   .solution-detail .tab-label {
@@ -1620,10 +1623,10 @@ body.is-announcement-hidden .solution-detail-nav {
   border-color: var(--error-500);
 }
 .design-box-item .track02 .caption {
-  color: var(--infomation-800);
+  color: var(--information-800);
 }
 .design-box-item .track02.active {
-  border-color: var(--infomation-800);
+  border-color: var(--information-800);
 }
 .design-box-item .track03 .caption {
   color: var(--primary-500);
@@ -2100,7 +2103,7 @@ body.is-announcement-hidden .solution-detail-nav {
   color: var(--warning-800);
 }
 .appeal-item .tag.blue {
-  color: var(--infomation-800);
+  color: var(--information-800);
 }
 .appeal-item .tag.green {
   color: var(--success-800);
@@ -2340,7 +2343,7 @@ body.is-announcement-hidden .solution-detail-nav {
   color: var(--opacity-black);
 }
 .testimony-card.ice em {
-  color: var(--infomation-600);
+  color: var(--information-600);
 }
 .testimony-card.ice .quote {
   background-image: url("img/img_quote_ice.svg");
@@ -2562,7 +2565,7 @@ body.is-announcement-hidden .solution-detail-nav {
 }
 
 .inquiry {
-  background: linear-gradient(168deg, color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%, #1c2128 45%, color-mix(in srgb, #1a2228 85%, var(--infomation-800) 15%) 100%);
+  background: linear-gradient(168deg, color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%, #1c2128 45%, color-mix(in srgb, #1a2228 85%, var(--information-800) 15%) 100%);
 }
 .inquiry .inner {
   padding: 88px 0;
@@ -2572,6 +2575,34 @@ body.is-announcement-hidden .solution-detail-nav {
     padding: 88px var(--spacing-s) !important;
   }
 }
+.legal {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.legal a {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+
+.mkt {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+}
+.mkt-hint {
+  margin: 0;
+  color: var(--opacity-black600);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.mkt-hint em {
+  color: var(--primary-500);
+}
+
 .inquiry-hd {
   margin-bottom: var(--spacing-xl);
   text-align: center;
@@ -2640,32 +2671,6 @@ body.is-announcement-hidden .solution-detail-nav {
 }
 .inquiry-full {
   grid-column: 1/-1;
-}
-.inquiry-legal {
-  margin: 0;
-  color: var(--gray-600);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-.inquiry-legal a {
-  color: var(--primary-600);
-  text-decoration: underline;
-}
-.inquiry-mkt {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xxs);
-}
-.inquiry-mkt-hint {
-  margin: 0;
-  color: var(--opacity-black600);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-.inquiry-mkt-hint em {
-  color: var(--primary-500);
 }
 .inquiry-actions {
   display: flex;
@@ -2764,14 +2769,6 @@ body.is-announcement-hidden .solution-detail-nav {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-s);
-}
-.pilot-modal-foot {
-  margin: var(--spacing-m) 0 0;
-  text-align: center;
-  color: var(--gray-500);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
 }
 
 .footer {
@@ -3128,8 +3125,4 @@ body.is-announcement-hidden .solution-detail-nav {
 
 body.is-modal-open {
   overflow: hidden;
-}
-
-.text-group {
-  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

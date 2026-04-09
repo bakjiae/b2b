@@ -87,6 +87,10 @@ $main-btn-max-width: 320px;
     width: 100%;
 }
 
+.text-group {
+    display: inline-block;
+}
+
 .layout {
     display: flex;
     justify-content: center;
@@ -137,7 +141,7 @@ $main-btn-max-width: 320px;
 
     @media (max-width: $breakpoint-02) {
         p {
-            @include body2;
+            font-size: clamp(12px, 3.181818vw, 16px);
         }
     }
 }
@@ -426,7 +430,7 @@ body.is-announcement-hidden {
             background: var(--primary-300);
             transition: all 0.3s ease;
 
-            &.sqaure {
+            &.square {
                 flex: none;
                 aspect-ratio: 1 / 1;
             }
@@ -579,6 +583,7 @@ body.is-announcement-hidden {
                     opacity: 0.6;
                     mix-blend-mode: plus-lighter;
                     filter: blur(var(--spacing-s));
+                    transform: scale(1.2);
                 }
 
                 #hero-glow-line,
@@ -855,8 +860,8 @@ body.is-announcement-hidden {
             }
 
             &.ai {
-                background: var(--infomation-300);
-                color: var(--infomation-800);
+                background: var(--information-300);
+                color: var(--information-800);
             }
         }
 
@@ -1100,13 +1105,13 @@ body.is-announcement-hidden {
     }
 
     &-section.ai {
-        background: var(--infomation-200);
+        background: var(--information-200);
 
         .card {
             li {
                 &::before {
                     content: "✓";
-                    color: var(--infomation-800);
+                    color: var(--information-800);
                 }
             }
         }
@@ -1186,7 +1191,7 @@ body.is-announcement-hidden {
 
                 &:nth-child(3) {
                     a.active {
-                        background: var(--infomation-600);
+                        background: var(--information-600);
                     }
                 }
 
@@ -1208,7 +1213,7 @@ body.is-announcement-hidden {
                     }
 
                     &.active.ai {
-                        background: var(--infomation-600);
+                        background: var(--information-600);
                     }
                 }
 
@@ -1367,11 +1372,11 @@ body.is-announcement-hidden {
 
             .track02 {
                 .caption {
-                    color: var(--infomation-800);
+                    color: var(--information-800);
                 }
 
                 &.active {
-                    border-color: var(--infomation-800);
+                    border-color: var(--information-800);
                 }
             }
 
@@ -1902,7 +1907,7 @@ body.is-announcement-hidden {
             }
 
             &.blue {
-                color: var(--infomation-800);
+                color: var(--information-800);
             }
 
             &.green {
@@ -2188,7 +2193,7 @@ body.is-announcement-hidden {
             color: var(--opacity-black);
 
             em {
-                color: var(--infomation-600);
+                color: var(--information-600);
             }
 
             .quote {
@@ -2453,13 +2458,41 @@ body.is-announcement-hidden {
     background: linear-gradient(168deg,
             color-mix(in srgb, #1a2826 88%, var(--primary-800) 12%) 0%,
             #1c2128 45%,
-            color-mix(in srgb, #1a2228 85%, var(--infomation-800) 15%) 100%);
+            color-mix(in srgb, #1a2228 85%, var(--information-800) 15%) 100%);
 
     .inner {
         padding: $section-padding-top-bottom 0;
 
         @media (max-width: $breakpoint-03) {
             padding: $section-padding-top-bottom var(--spacing-s) !important;
+        }
+    }
+
+
+    @at-root .legal {
+        margin: 0;
+        color: var(--gray-600);
+        @include body2;
+
+        a {
+            color: var(--primary-600);
+            text-decoration: underline;
+        }
+    }
+
+    @at-root .mkt {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xxs);
+        
+        &-hint {
+            margin: 0;
+            color: var(--opacity-black600);
+            @include body2;
+    
+            em {
+                color: var(--primary-500);
+            }
         }
     }
 
@@ -2536,33 +2569,6 @@ body.is-announcement-hidden {
 
     &-full {
         grid-column: 1 / -1;
-    }
-
-    &-legal {
-        margin: 0;
-        color: var(--gray-600);
-        @include body2;
-
-        a {
-            color: var(--primary-600);
-            text-decoration: underline;
-        }
-    }
-
-    &-mkt {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-xxs);
-    }
-
-    &-mkt-hint {
-        margin: 0;
-        color: var(--opacity-black600);
-        @include body2;
-
-        em {
-            color: var(--primary-500);
-        }
     }
 
     &-actions {
@@ -2670,13 +2676,6 @@ body.is-announcement-hidden {
             display: flex;
             flex-direction: column;
             gap: var(--spacing-s);
-        }
-
-        &-foot {
-            margin: var(--spacing-m) 0 0;
-            text-align: center;
-            color: var(--gray-500);
-            @include body2;
         }
     }
 
@@ -3064,12 +3063,7 @@ body.is-announcement-hidden {
         text-align: center;
     }
 }
-
 // global state
 body.is-modal-open {
     overflow: hidden;
-}
-
-.text-group {
-    display: inline-block;
 }
