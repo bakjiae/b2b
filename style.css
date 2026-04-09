@@ -2476,14 +2476,11 @@ body.is-announcement-hidden .solution-detail-nav {
   background: transparent;
   text-align: left;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-.faq-q-text {
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
+}
+.faq-q-text {
   flex: 1;
   min-width: 0;
 }
@@ -2561,6 +2558,13 @@ body.is-announcement-hidden .solution-detail-nav {
   .faq-main, .faq-aside {
     flex: 1;
     width: 100%;
+  }
+}
+@media (max-width: 440px) {
+  .faq-q {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
   }
 }
 

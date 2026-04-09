@@ -2359,11 +2359,10 @@ body.is-announcement-hidden {
         background: transparent;
         text-align: left;
         cursor: pointer;
-        @include body1b;
+        @include h2;
     }
 
     &-q-text {
-        @include h2;
         flex: 1;
         min-width: 0;
     }
@@ -2449,6 +2448,12 @@ body.is-announcement-hidden {
         &-aside {
             flex: 1;
             width: 100%;
+        }
+    }
+
+    @media (max-width: $breakpoint-03) {
+        &-q {
+            @include h3;
         }
     }
 }
