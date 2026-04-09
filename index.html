@@ -44,11 +44,17 @@
                                 required autocomplete="tel" />
                         </div>
 
+                        <p class="inquiry-legal">아래 '파일럿 신청하기'를 클릭하면 요청하신 콘텐츠 제공을 위해 링고라 튜터링이 개인 정보를 저장 및 처리하는 데 동의하시게
+                            됩니다. 자세한 내용은 <a href="https://lingora.app/home/terms/privacy">개인정보보호처리방침</a>을 참고해 주세요.</p>
+                        <div class="inquiry-mkt">
+                            <label class="f-lbl inquiry-mkt-lbl"><input type="checkbox" name="marketing" value="1" />
+                                마케팅 수신 동의 <span class="req opt">(선택)</span></label>
+                            <p class="inquiry-mkt-hint"><em>무료 HR 뉴스레터, 교육 자료, 웨비나 및 이벤트 소식</em>을 받아보실 수 있습니다.</p>
+                        </div>
+
                         <button type="submit" class="btn"
                             onclick="openModal('pilot-done-modal'); closeModal('pilot-modal')">파일럿 신청하기</button>
                     </form>
-
-                    <p class="pilot-modal-foot">수집된 정보는 파일럿 체험 안내 목적으로만 사용됩니다</p>
                 </div>
             </div>
         </div>
@@ -57,10 +63,12 @@
     <div class="modal small" id="inquiry-done-modal" hidden>
         <div class="modal-backdrop" onclick="closeModal('inquiry-done-modal')"></div>
         <div class="modal-dialog">
-            <div class="modal-dialog-inner">
-                <h2 class="modal-title">도입 문의가 정상적으로 접수되었습니다.</h2>
-                <p class="modal-desc">남겨주신 연락처로 담당자가 검토 후 안내를 도와드리겠습니다.</p>
-                <button type="button" class="btn" onclick="closeModal('inquiry-done-modal')">확인</button>
+            <div class="modal-container">
+                <div class="modal-container-inner">
+                    <h2 class="modal-title">도입 문의가 정상적으로 접수되었습니다.</h2>
+                    <p class="modal-desc">남겨주신 연락처로 담당자가 검토 후 안내를 도와드리겠습니다.</p>
+                    <button type="button" class="btn" onclick="closeModal('inquiry-done-modal')">확인</button>
+                </div>
             </div>
         </div>
     </div>
@@ -68,10 +76,12 @@
     <div class="modal small" id="pilot-done-modal" hidden>
         <div class="modal-backdrop" onclick="closeModal('pilot-done-modal')"></div>
         <div class="modal-dialog">
-            <div class="modal-dialog-inner">
-                <h2 class="modal-title">파일럿 신청이 정상적으로 접수되었습니다.</h2>
-                <p class="modal-desc">남겨주신 연락처로 파일럿 안내를 도와드리겠습니다.</p>
-                <button type="button" class="btn" onclick="closeModal('pilot-done-modal')">확인</button>
+            <div class="modal-container">
+                <div class="modal-container-inner">
+                    <h2 class="modal-title">파일럿 신청이 정상적으로 접수되었습니다.</h2>
+                    <p class="modal-desc">남겨주신 연락처로 파일럿 안내를 도와드리겠습니다.</p>
+                    <button type="button" class="btn" onclick="closeModal('pilot-done-modal')">확인</button>
+                </div>
             </div>
         </div>
     </div>
@@ -647,25 +657,25 @@
                     </li>
                     <li class="appeal-item yellow">
                         <div class="icon circles"></div>
-                        <h3 class="title">원어민 1:1 회화 · 출강 · AI를 하나의 플랫폼에서</h3>
+                        <h3 class="title"><span class="text-group">1:1 회화 · 출강 · AI를</span> <span class="text-group">하나의 플랫폼에서</span></h3>
                         <p class="desc">관리와 데이터, 커리큘럼까지 하나의 시스템으로 연결됩니다.</p>
                         <p class="tag gold"># 580개+ 고객사가 선택한 통합 교육 플랫폼</p>
                     </li>
                     <li class="appeal-item blue">
                         <div class="icon plane"></div>
-                        <h3 class="title">업무 현장에 맞는 맞춤 커리큘럼</h3>
+                        <h3 class="title"><span class="text-group">업무 현장에 맞는</span> <span class="text-group">맞춤 커리큘럼</span></h3>
                         <p class="desc">맞춤 실전 시나리오 기반 학습으로 실무에서 바로 활용 가능한 커뮤니케이션 역량을 강화합니다.</p>
                         <p class="tag blue"># 업계 최다 2,400개 토픽</p>
                     </li>
                     <li class="appeal-item green">
                         <div class="icon chain"></div>
-                        <h3 class="title">모든 학습을 하나의 커리큘럼으로 연결</h3>
+                        <h3 class="title"><span class="text-group">모든 학습을</span> <span class="text-group">하나의 커리큘럼으로 연결</span></h3>
                         <p class="desc">출강, 1:1 회화, AI 학습이 동일한 커리큘럼으로 연계되어 학습 효과를 극대화합니다.</p>
                         <p class="tag green"># 학습 방식에 관계없이 동일한 커리큘럼</p>
                     </li>
                     <li class="appeal-item pink">
                         <div class="icon arrow"></div>
-                        <h3 class="title">수치로 증명하는 교육 성과</h3>
+                        <h3 class="title"><span class="text-group">수치로 증명하는</span> <span class="text-group">교육 성과</span></h3>
                         <p class="desc">사전 · 사후 레벨 테스트, 실시간 대시보드, 종합 결과보고서까지 교육 성과가 숫자로 보입니다.</p>
                         <p class="tag red"># 출결 · 성취도 · 만족도 · 레벨향상 보고</p>
                     </li>
@@ -1051,7 +1061,7 @@
                 </div>
 
                 <div class="footer-cta">
-                    <p class="footer-cta-sub">모바일 수업 · 오프라인 출강 · AI 학습을 하나의 서비스로</p>
+                    <p class="footer-cta-sub"><span class="text-group">모바일 수업 · </span><span class="text-group">오프라인 출강 · </span><span class="text-group">AI 학습을</span> <span class="text-group">하나의 서비스로</span></p>
                     <p class="footer-cta-title">
                         기업 외국어 교육의<br />
                         새로운 기준을 만들어갑니다.

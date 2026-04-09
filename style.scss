@@ -342,11 +342,6 @@ body.is-announcement-hidden {
     }
 
     @media (max-width: $breakpoint-02) {
-        .btn {
-            padding: var(--spacing-xxs) var(--spacing-s);
-            height: var(--height-m);
-        }
-
         .nav {
             ul {
                 display: none;
@@ -1954,6 +1949,14 @@ body.is-announcement-hidden {
                 padding: var(--spacing-xl);
                 grid-column: 1 / -1;
             }
+
+            .title {
+                @include h2;
+            }
+
+            .tag {
+                @include h3;
+            }
         }
     }
 
@@ -2023,6 +2026,7 @@ body.is-announcement-hidden {
             .compare-cell {
                 justify-content: flex-start;
                 align-items: flex-start;
+                padding-left: 0;
             }
         }
 
@@ -2703,7 +2707,7 @@ body.is-announcement-hidden {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: var(--spacing-m);
+        gap: var(--spacing-s);
 
         a {
             padding: var(--spacing-xxs);
@@ -2788,7 +2792,6 @@ body.is-announcement-hidden {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: var(--spacing-m);
 
         a {
             color: var(--opacity-black);
@@ -2848,13 +2851,13 @@ body.is-announcement-hidden {
         min-height: 200px;
 
         @media (max-width: $breakpoint-02) {
-            padding: var(--spacing-l);
+            padding: var(--spacing-m);
         }
 
         &-sub {
             margin: 0 0 var(--spacing-s);
             color: var(--gray-600);
-            @include body2;
+            @include body1;
         }
 
         &-title {
@@ -3061,4 +3064,8 @@ body.is-announcement-hidden {
 // global state
 body.is-modal-open {
     overflow: hidden;
+}
+
+.text-group {
+    display: inline-block;
 }
