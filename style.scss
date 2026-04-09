@@ -140,8 +140,13 @@ $main-btn-max-width: 320px;
     }
 
     @media (max-width: $breakpoint-02) {
+        .inner {
+            padding: 0 !important;
+        }
+        
         p {
-            font-size: clamp(12px, 3.181818vw, 16px);
+            font-size: clamp(12px, 3.5vw, 16px); //3.181818vw
+            line-height: 125%;
         }
     }
 }
@@ -2934,7 +2939,7 @@ body.is-announcement-hidden {
         right: 0;
         display: flex;
         justify-content: space-between;
-        padding: var(--spacing-m) var(--spacing-l);
+        padding: 0 var(--spacing-l) var(--spacing-xl);
         gap: var(--spacing-s);
         z-index: 100;
         transition: opacity .2s ease, transform .2s ease;
