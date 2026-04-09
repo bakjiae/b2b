@@ -2956,11 +2956,14 @@ body.is-announcement-hidden .solution-detail-nav {
   gap: var(--spacing-xxs) var(--spacing-xs);
 }
 .footer-cta-store a {
-  display: inline-flex;
+  display: block;
   height: var(--height-m);
 }
 .footer-cta-store a:hover {
   opacity: 0.88;
+}
+.footer-cta-store a img {
+  height: 100%;
 }
 .footer-cta-img {
   position: absolute;

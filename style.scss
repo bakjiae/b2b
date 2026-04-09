@@ -2874,11 +2874,15 @@ body.is-announcement-hidden {
             gap: var(--spacing-xxs) var(--spacing-xs);
 
             a {
-                display: inline-flex;
+                display: block;
                 height: var(--height-m);
 
                 &:hover {
                     opacity: 0.88;
+                }
+
+                img {
+                    height: 100%;
                 }
             }
         }
